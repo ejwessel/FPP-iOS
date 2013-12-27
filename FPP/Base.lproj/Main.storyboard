@@ -143,7 +143,6 @@
         <!--Table View Controller-->
         <scene sceneID="apW-7q-xBS">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jDx-xo-KWK" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="TYi-dB-wb8" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="1se-fc-KyR">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -243,7 +242,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Ion Inertial Length" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qWI-jx-opZ">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Electron Inertial Length" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qWI-jx-opZ">
                                                     <rect key="frame" x="15" y="0.0" width="270" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
@@ -264,7 +263,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Electron Inertial Length" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aBA-y3-zba">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Ion Inertial Length" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aBA-y3-zba">
                                                     <rect key="frame" x="15" y="0.0" width="270" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
@@ -309,13 +308,13 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="IDc-Im-rAh"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jDx-xo-KWK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1087" y="323"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="2Ck-kS-nGp">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="o75-hn-Gqt" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="cLJ-eA-4iL" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="VTe-Cp-MC8" customClass="Detail">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -342,7 +341,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
-                                            <segue destination="Wlj-ke-xoY" kind="push" id="zOn-wv-35E"/>
+                                            <segue destination="lmL-P5-fat" kind="push" id="4uT-8A-fdO"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="Iva-eP-Xtg" style="IBUITableViewCellStyleDefault" id="6vq-kZ-Cyq">
@@ -502,40 +501,14 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="uUM-Im-tLc"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o75-hn-Gqt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1109" y="-432"/>
         </scene>
-        <!--Electron Gyrofrequency Controller-->
-        <scene sceneID="8GJ-DX-cBJ">
-            <objects>
-                <viewController id="Wlj-ke-xoY" customClass="ElectronGyrofrequencyController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="w4T-As-n6s"/>
-                        <viewControllerLayoutGuide type="bottom" id="1yG-Dk-AXi"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="hlm-jo-gNZ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="electron gyrofrequency" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TtU-Dz-ylO">
-                                <rect key="frame" x="72" y="127" width="176" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="Nnf-id-3H0"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fKe-n0-M6M" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1697" y="-993"/>
-        </scene>
-        <!--Detail View Controller-->
+        <!--Ion Gyrofrequency Controller-->
         <scene sceneID="Li4-Uc-9Yb">
             <objects>
-                <viewController id="H6s-Rn-2Eu" customClass="DetailViewController" sceneMemberID="viewController">
+                <viewController id="H6s-Rn-2Eu" customClass="IonGyrofrequencyController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aNO-g7-CHq"/>
                         <viewControllerLayoutGuide type="bottom" id="fey-10-Qhk"/>
@@ -559,10 +532,10 @@
             </objects>
             <point key="canvasLocation" x="2100" y="-993"/>
         </scene>
-        <!--Detail View Controller-->
+        <!--Electron Plasma Frequency Controller-->
         <scene sceneID="AcH-ey-qEh">
             <objects>
-                <viewController id="uLn-2c-cG9" customClass="DetailViewController" sceneMemberID="viewController">
+                <viewController id="uLn-2c-cG9" customClass="ElectronPlasmaFrequencyController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cms-fN-Xcq"/>
                         <viewControllerLayoutGuide type="bottom" id="ang-WX-STg"/>
@@ -586,10 +559,10 @@
             </objects>
             <point key="canvasLocation" x="2465" y="-993"/>
         </scene>
-        <!--Detail View Controller-->
+        <!--Ion Plasma Frequency Controller-->
         <scene sceneID="fKr-fm-too">
             <objects>
-                <viewController id="Xby-AQ-G4s" customClass="DetailViewController" sceneMemberID="viewController">
+                <viewController id="Xby-AQ-G4s" customClass="IonPlasmaFrequencyController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Dhi-Ii-vxG"/>
                         <viewControllerLayoutGuide type="bottom" id="RgH-Qs-nJt"/>
@@ -640,10 +613,10 @@
             </objects>
             <point key="canvasLocation" x="3181" y="-993"/>
         </scene>
-        <!--Detail View Controller-->
+        <!--Ion Trapping Rate Controller-->
         <scene sceneID="tzC-r4-Bik">
             <objects>
-                <viewController id="QPG-SL-YCE" customClass="DetailViewController" sceneMemberID="viewController">
+                <viewController id="QPG-SL-YCE" customClass="IonTrappingRateController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mef-5I-hCI"/>
                         <viewControllerLayoutGuide type="bottom" id="GM8-5Q-g24"/>
@@ -667,10 +640,10 @@
             </objects>
             <point key="canvasLocation" x="3524" y="-993"/>
         </scene>
-        <!--Detail View Controller-->
+        <!--Electron Collision Rate Controller-->
         <scene sceneID="2iQ-U4-3Fd">
             <objects>
-                <viewController id="F6V-Sw-7xc" customClass="DetailViewController" sceneMemberID="viewController">
+                <viewController id="F6V-Sw-7xc" customClass="ElectronCollisionRateController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jg3-I9-R1r"/>
                         <viewControllerLayoutGuide type="bottom" id="tjM-av-82T"/>
@@ -694,10 +667,10 @@
             </objects>
             <point key="canvasLocation" x="3861" y="-993"/>
         </scene>
-        <!--Detail View Controller-->
+        <!--Ion Collision Rate Controller-->
         <scene sceneID="xSb-OW-U6l">
             <objects>
-                <viewController id="2Ff-Sy-nPP" customClass="DetailViewController" sceneMemberID="viewController">
+                <viewController id="2Ff-Sy-nPP" customClass="IonCollisionRateController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Hf5-KR-sMj"/>
                         <viewControllerLayoutGuide type="bottom" id="lwK-dx-7zv"/>
@@ -721,10 +694,10 @@
             </objects>
             <point key="canvasLocation" x="4200" y="-993"/>
         </scene>
-        <!--Detail View Controller-->
+        <!--Electron Inertial Length Controller-->
         <scene sceneID="qR6-wh-Pdo">
             <objects>
-                <viewController id="35u-Ff-CCf" customClass="DetailViewController" sceneMemberID="viewController">
+                <viewController id="35u-Ff-CCf" customClass="ElectronInertialLengthController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IVf-xH-cls"/>
                         <viewControllerLayoutGuide type="bottom" id="iQv-WQ-unM"/>
@@ -748,10 +721,10 @@
             </objects>
             <point key="canvasLocation" x="3113" y="323"/>
         </scene>
-        <!--Detail View Controller-->
+        <!--Ion Gyroradius Controller-->
         <scene sceneID="o7J-Lf-1ar">
             <objects>
-                <viewController id="k9r-BG-fCY" customClass="DetailViewController" sceneMemberID="viewController">
+                <viewController id="k9r-BG-fCY" customClass="IonGyroradiusController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lbU-SV-XMO"/>
                         <viewControllerLayoutGuide type="bottom" id="6pJ-Fj-khN"/>
@@ -775,10 +748,10 @@
             </objects>
             <point key="canvasLocation" x="2737" y="323"/>
         </scene>
-        <!--Detail View Controller-->
+        <!--Electron Gyroradius Controller-->
         <scene sceneID="p7r-Dk-pvx">
             <objects>
-                <viewController id="BLw-hw-sJE" customClass="DetailViewController" sceneMemberID="viewController">
+                <viewController id="BLw-hw-sJE" customClass="ElectronGyroradiusController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IM4-ME-yPs"/>
                         <viewControllerLayoutGuide type="bottom" id="FvR-V4-ytj"/>
@@ -802,10 +775,10 @@
             </objects>
             <point key="canvasLocation" x="2381" y="323"/>
         </scene>
-        <!--Detail View Controller-->
+        <!--Classical Distance Minimum Approach Controller-->
         <scene sceneID="L8h-Kg-aDB">
             <objects>
-                <viewController id="6vh-1p-Ke5" customClass="DetailViewController" sceneMemberID="viewController">
+                <viewController id="6vh-1p-Ke5" customClass="ClassicalDistanceMinimumApproachController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xNm-DG-Fhk"/>
                         <viewControllerLayoutGuide type="bottom" id="Xpb-FR-DJn"/>
@@ -829,10 +802,10 @@
             </objects>
             <point key="canvasLocation" x="2017" y="323"/>
         </scene>
-        <!--Detail View Controller-->
+        <!--Electron Broglie Length Controller-->
         <scene sceneID="f9N-at-7Sv">
             <objects>
-                <viewController id="vJQ-2C-8qa" customClass="DetailViewController" sceneMemberID="viewController">
+                <viewController id="vJQ-2C-8qa" customClass="ElectronBroglieLengthController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="n0v-Aq-Y8c"/>
                         <viewControllerLayoutGuide type="bottom" id="oaP-Rd-lJ2"/>
@@ -856,10 +829,10 @@
             </objects>
             <point key="canvasLocation" x="1631" y="323"/>
         </scene>
-        <!--Detail View Controller-->
+        <!--Debye Length Controller-->
         <scene sceneID="qrm-bE-e6b">
             <objects>
-                <viewController id="bry-9f-ze8" customClass="DetailViewController" sceneMemberID="viewController">
+                <viewController id="bry-9f-ze8" customClass="DebyeLengthController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RIg-vd-9TJ"/>
                         <viewControllerLayoutGuide type="bottom" id="7x8-a7-2qb"/>
@@ -883,10 +856,10 @@
             </objects>
             <point key="canvasLocation" x="3861" y="323"/>
         </scene>
-        <!--Detail View Controller-->
+        <!--Ion Inertial Length Controller-->
         <scene sceneID="RCz-IH-1Oz">
             <objects>
-                <viewController id="NMP-pj-whx" customClass="DetailViewController" sceneMemberID="viewController">
+                <viewController id="NMP-pj-whx" customClass="IonInertialLengthController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="feZ-cL-bkd"/>
                         <viewControllerLayoutGuide type="bottom" id="wrS-hH-WH1"/>
@@ -909,6 +882,66 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T3X-0d-g9k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3477" y="323"/>
+        </scene>
+        <!--Electron Gyrofrequency Controller-->
+        <scene sceneID="mDm-hA-kxc">
+            <objects>
+                <viewController id="lmL-P5-fat" customClass="ElectronGyrofrequencyController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Y13-e7-Y2p"/>
+                        <viewControllerLayoutGuide type="bottom" id="x3M-Nd-Emj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4Go-x0-4hg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Electron Gyrofrequency" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cGK-r8-cKg">
+                                <rect key="frame" x="70" y="86" width="181" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="input" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qxU-38-3J6">
+                                <rect key="frame" x="112" y="190" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="f" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eia-6c-nA9">
+                                <rect key="frame" x="72" y="278" width="6" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ans1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qoD-Tt-wOK">
+                                <rect key="frame" x="149" y="278" width="37" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ans2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KQt-xi-bhx">
+                                <rect key="frame" x="149" y="327" width="37" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="w" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PVq-Rn-dch">
+                                <rect key="frame" x="72" y="327" width="13" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="7Sc-rP-SiF"/>
+                    <connections>
+                        <outlet property="name" destination="cGK-r8-cKg" id="Kns-sB-VeP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TBb-Ge-OPN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1738" y="-993"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

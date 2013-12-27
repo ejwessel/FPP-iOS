@@ -1,19 +1,18 @@
 //
-//  ElectronGyrofrequencyController.m
+//  ElectronTrappingRateController.m
 //  FPP
 //
 //  Created by Ethan Wessel on 12/27/13.
 //  Copyright (c) 2013 test. All rights reserved.
 //
 
-#import "ElectronGyrofrequencyController.h"
-#import "Constants.h"
+#import "ElectronTrappingRateController.h"
 
-@interface ElectronGyrofrequencyController ()
+@interface ElectronTrappingRateController ()
 
 @end
 
-@implementation ElectronGyrofrequencyController
+@implementation ElectronTrappingRateController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -28,10 +27,6 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    self.name.text = @"hi";
-    self.someNumber = BoltzmannConstant;
-    
-    NSLog(@"%f", self.someNumber);
 }
 
 - (void)didReceiveMemoryWarning

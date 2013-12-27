@@ -9,6 +9,7 @@
 #import "OptionsViewController.h"
 
 #import "DetailViewController.h"
+#import "ElectronGyrofrequencyController.h"
 
 @interface OptionsViewController () {
 }

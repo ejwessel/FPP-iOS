@@ -10,4 +10,7 @@
 
 @interface ElectronGyrofrequencyController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UILabel *name;
+@property float someNumber;
+
 @end
