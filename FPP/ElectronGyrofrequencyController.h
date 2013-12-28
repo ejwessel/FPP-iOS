@@ -7,10 +7,23 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
 
 @interface ElectronGyrofrequencyController : UIViewController
 
-@property (strong, nonatomic) IBOutlet UILabel *name;
-@property float someNumber;
+@property (strong, nonatomic) IBOutlet UITextField *inputValue;
+@property (strong, nonatomic) IBOutlet UILabel *outputFrequency;
+@property (strong, nonatomic) IBOutlet UILabel *outputOmega;
+@property (strong, nonatomic) IBOutlet UILabel *frequencyLabel;
+@property (strong, nonatomic) IBOutlet UILabel *omegaLabel;
+@property (strong, nonatomic) IBOutlet UILabel *magneticFieldLabel;
+@property (strong, nonatomic) IBOutlet UILabel *frequencyEquation;
+@property (strong, nonatomic) IBOutlet UILabel *omegaEquation;
+
+
+- (float) calculateFrequencyWithInput: (float)B;
+- (float) calculateOmegaWithInput: (float)B;
+
+- (void) textChanged:(NSNotification*) note;
 
 @end
