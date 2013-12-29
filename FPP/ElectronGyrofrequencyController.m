@@ -7,7 +7,6 @@
 //
 
 #import "ElectronGyrofrequencyController.h"
-#import "Constants.h"
 
 @interface ElectronGyrofrequencyController ()
 
@@ -21,8 +20,7 @@
 @synthesize frequencyLabel;
 @synthesize omegaLabel;
 @synthesize magneticFieldLabel;
-@synthesize omegaEquation;
-@synthesize frequencyEquation;
+@synthesize scrollView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -36,6 +34,8 @@
     [super viewDidLoad];
     
 	// Do any additional setup after loading the view.
+    self.title = @"Electron Gyrofreq.";
+    
     self.inputValue.text = @"";
     self.inputValue.keyboardType = UIKeyboardTypeDecimalPad;
     self.inputValue.clearButtonMode = true;
@@ -49,12 +49,8 @@
     self.outputOmega.layer.borderWidth = 0.5;
     self.outputOmega.layer.cornerRadius = 5;
     
-    self.frequencyEquation.text = @"\u0192 = \u03C9/2\u03C0 = 2.80 * 10^6B Hz";
     self.frequencyLabel.text = @"\u0192 =";
-    self.omegaEquation.text = @"\u03C9 = \uFF45B/\uFF4D\uFF43 = 1.76 * 10^7B rad/sec";
     self.omegaLabel.text = @"\u03C9 =";
-    
-    self.title = @"Electron Gyrofreq.";
     
     [[NSNotificationCenter defaultCenter]
      addObserver:self
@@ -106,17 +102,14 @@
     
     if(!error){
         float B = [self.inputValue.text floatValue];
-        NSLog(@"number: %f", B);
+        NSLog(@"number: %g", B);
         
         //do calculations
         float f = [self calculateFrequencyWithInput:B];
         float w = [self calculateOmegaWithInput:B];
-
-        NSString *fString = [[NSNumber numberWithFloat:f] stringValue];
-        NSString *wString = [[NSNumber numberWithFloat:w] stringValue];
         
-        self.outputFrequency.text = fString;
-        self.outputOmega.text = wString;
+        self.outputFrequency.text = [[NSString alloc] initWithFormat:@"%.3e", f];
+        self.outputOmega.text = [[NSString alloc] initWithFormat:@"%.3e", w];
     }
     else{
         self.outputFrequency.text = @"Error with input";
