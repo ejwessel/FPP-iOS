@@ -1060,14 +1060,12 @@
                     </scrollView>
                     <navigationItem key="navigationItem" id="7Sc-rP-SiF"/>
                     <connections>
-                        <outlet property="container" destination="XvS-sP-Zdz" id="ipO-Wx-qhH"/>
                         <outlet property="frequencyLabel" destination="hvA-i7-F4l" id="Na7-be-q8c"/>
                         <outlet property="inputValue" destination="d13-sY-Ke5" id="3NE-le-cDB"/>
                         <outlet property="magneticFieldLabel" destination="ZW4-qP-bOt" id="mG7-JT-1Lt"/>
                         <outlet property="omegaLabel" destination="FKJ-Lw-aRv" id="5DE-wI-So2"/>
                         <outlet property="outputFrequency" destination="rGj-wk-8sm" id="UYH-7X-gYF"/>
                         <outlet property="outputOmega" destination="6Nz-ub-grV" id="sYp-jH-W6u"/>
-                        <outlet property="scrollView" destination="EU7-tA-QQF" id="9oe-JJ-YBp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TBb-Ge-OPN" userLabel="First Responder" sceneMemberID="firstResponder"/>

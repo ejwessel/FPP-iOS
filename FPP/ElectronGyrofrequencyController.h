@@ -17,9 +17,9 @@
 @property (strong, nonatomic) IBOutlet UILabel *frequencyLabel;
 @property (strong, nonatomic) IBOutlet UILabel *omegaLabel;
 @property (strong, nonatomic) IBOutlet UILabel *magneticFieldLabel;
-@property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
-@property (strong, nonatomic) IBOutlet UIView *container;
 
+@property const float FREQ_CONST;
+@property const float OMEGA_CONST;
 
 - (float) calculateFrequencyWithInput: (float)B;
 - (float) calculateOmegaWithInput: (float)B;

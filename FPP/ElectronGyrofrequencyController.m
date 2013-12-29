@@ -20,7 +20,8 @@
 @synthesize frequencyLabel;
 @synthesize omegaLabel;
 @synthesize magneticFieldLabel;
-@synthesize scrollView;
+@synthesize FREQ_CONST;
+@synthesize OMEGA_CONST;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -35,6 +36,10 @@
     
 	// Do any additional setup after loading the view.
     self.title = @"Electron Gyrofreq.";
+    
+    self.FREQ_CONST = 2.80 * pow(10, 6);
+    self.OMEGA_CONST = 1.76 * pow(10, 7);
+
     
     self.inputValue.text = @"";
     self.inputValue.keyboardType = UIKeyboardTypeDecimalPad;
@@ -65,15 +70,11 @@
 }
 
 - (float) calculateFrequencyWithInput:(float)B{
-    float frequencyConst = 2.80 * pow(10, 6);
-    float result = frequencyConst * B;
-    return result;
+    return self.FREQ_CONST * B;
 }
 
 - (float) calculateOmegaWithInput:(float)B{
-    float omegaConst = 1.76 * pow(10, 7);
-    float result = omegaConst * B;
-    return result;
+    return self.OMEGA_CONST * B;
 }
 
 - (void) textChanged:(NSNotification *)note{
