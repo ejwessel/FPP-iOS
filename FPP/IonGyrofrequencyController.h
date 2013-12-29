@@ -21,7 +21,8 @@
 @property (strong, nonatomic) IBOutlet UILabel *muLabel;
 @property (strong, nonatomic) IBOutlet UILabel *zetaLabel;
 
-
+@property const float FREQ_CONST;
+@property const float OMEGA_CONST;
 
 - (float) calculateFrequencyWithInput:(float)B with:(float)m with:(float)z;
 - (float) calculateOmegaWithInput:(float)B with:(float)m with:(float)z;

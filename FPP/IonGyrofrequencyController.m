@@ -24,6 +24,8 @@
 @synthesize magneticFieldLabel;
 @synthesize muLabel;
 @synthesize zetaLabel;
+@synthesize FREQ_CONST;
+@synthesize OMEGA_CONST;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -38,6 +40,9 @@
     
 	// Do any additional setup after loading the view.
     self.title = @"Ion Gyrofreq.";
+
+    self.FREQ_CONST = 1.52 * pow(10, 3);
+    self.OMEGA_CONST = 9.58 * pow(10, 3);
 
     self.inputValue1.text = @"";
     self.inputValue1.keyboardType = UIKeyboardTypeDecimalPad;
@@ -76,15 +81,11 @@
 }
 
 - (float) calculateFrequencyWithInput:(float)B with:(float)m with:(float)z{
-    float frequencyConst = 1.52 * pow(10, 3);
-    float result = frequencyConst * z * pow(m, -1) * B;
-    return result;
+    return self.FREQ_CONST * z * pow(m, -1) * B;
 }
 
 - (float) calculateOmegaWithInput:(float)B with:(float)m with:(float)z{
-    float omegaConst = 9.58 * pow(10, 3);
-    float result = omegaConst * z * pow(m, -1) 	* B;
-    return result;
+    return self.OMEGA_CONST * z * pow(m, -1) 	* B;
 }
 
 - (void) textChanged:(NSNotification *)note{
