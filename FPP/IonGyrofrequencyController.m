@@ -58,15 +58,18 @@
     self.inputValue3.clearButtonMode = true;
     
     self.outputFrequency.text = @"0";
-    self.outputFrequency.layer.borderWidth = 0.5;
+    self.outputFrequency.layer.borderWidth = 1.0;
     self.outputFrequency.layer.cornerRadius = 5;
+    self.outputFrequency.layer.borderColor = self.navigationController.toolbar.tintColor.CGColor;
     
     self.outputOmega.text = @"0";
-    self.outputOmega.layer.borderWidth = 0.5;
+    self.outputOmega.layer.borderWidth = 1.0;
     self.outputOmega.layer.cornerRadius = 5;
+    self.outputOmega.layer.borderColor = self.navigationController.toolbar.tintColor.CGColor;
     
     self.frequencyLabel.text = @"\u0192 =";
     self.omegaLabel.text = @"\u03C9 =";
+    self.muLabel.text = @"\u03BC =";
     
     [[NSNotificationCenter defaultCenter]
      addObserver:self
@@ -93,23 +96,14 @@
     NSLog(@"text changed");
     
     //do checks...
-    NSArray *chunks = [self.inputValue1.text componentsSeparatedByString:@"."];
-    
+    NSArray *chunks1 = [self.inputValue1.text componentsSeparatedByString:@"."];
+    NSArray *chunks2 = [self.inputValue2.text componentsSeparatedByString:@"."];
+    NSArray *chunks3 = [self.inputValue3.text componentsSeparatedByString:@"."];
     Boolean error = false;
-    
-    //if the number has a decimal
-    if(chunks.count > 1){
-        //check no more than 1 decimal point
-        if(chunks.count > 2){
-            //display error message
-            error = true;
-        }
-        
-        //check no more than 8 decimal precision
-        if([chunks[1] length] > 8){
-            //display error message
-            error = true;
-        }
+    //check no more than 1 decimal point
+    if(chunks1.count > 2 || chunks2.count > 2 || chunks3.count > 2){
+        //display error message
+        error = true;
     }
     
     if(!error){

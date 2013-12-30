@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <QuartzCore/QuartzCore.h>
 
 @interface IonGyrofrequencyController : UIViewController
 @property (strong, nonatomic) IBOutlet UITextField *inputValue1;
