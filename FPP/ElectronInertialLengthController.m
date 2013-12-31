@@ -1,20 +1,19 @@
 //
-//  IonInertialLengthController.m
+//  ElectronInertialLengthController.m
 //  FPP
 //
-//  Created by Ethan Wessel on 12/27/13.
+//  Created by Ethan Wessel on 12/31/13.
 //  Copyright (c) 2013 test. All rights reserved.
 //
 
-#import "IonInertialLengthController.h"
+#import "ElectronInertialLengthController.h"
 
-@interface IonInertialLengthController ()
+@interface ElectronInertialLengthController ()
 
 @end
 
-@implementation IonInertialLengthController
+@implementation ElectronInertialLengthController
 @synthesize outputAnswer;
-@synthesize muInput;
 @synthesize nInput;
 @synthesize CONST_VALUE;
 
@@ -32,23 +31,17 @@
 	// Do any additional setup after loading the view.
     self.title = @"Electron Intertial Length";
     
-    self.CONST_VALUE = 2.28 * pow(10, 7);
-    
-    self.muInput.text = @"";
-    self.muInput.keyboardType = UIKeyboardTypeDecimalPad;
-    self.muInput.clearButtonMode = true;
-    [self.muInput becomeFirstResponder];
+    self.CONST_VALUE = 5.31 * pow(10, 5);
     
     self.nInput.text = @"";
     self.nInput.keyboardType = UIKeyboardTypeDecimalPad;
     self.nInput.clearButtonMode = true;
-    
+    [self.nInput becomeFirstResponder];
+
     self.outputAnswer.text = @"0";
     self.outputAnswer.layer.borderWidth = 1.0;
     self.outputAnswer.layer.cornerRadius = 5;
     self.outputAnswer.layer.borderColor = self.navigationController.toolbar.tintColor.CGColor;
-    
-    self.muLabel.text = @"\u03BC =";
     
     [[NSNotificationCenter defaultCenter]
      addObserver:self
@@ -62,8 +55,8 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (float)calculateWithInput:(float)m with:(float)n{
-    return self.CONST_VALUE * pow(m/n, .5);
+- (float) calculateWithInput:(float)n{
+    return self.CONST_VALUE * pow(n, -.5);
 }
 
 - (void) textChanged:(NSNotification *)note{
@@ -71,22 +64,20 @@
     NSLog(@"text changed");
     
     //do checks...
-    NSArray *chunks1 = [self.muInput.text componentsSeparatedByString:@"."];
-    NSArray *chunks2 = [self.nInput.text componentsSeparatedByString:@"."];
+    NSArray *chunks = [self.nInput.text componentsSeparatedByString:@"."];
     Boolean error = false;
     //check no more than 1 decimal point
-    if(chunks1.count > 2 || chunks2.count > 2){
+    if(chunks.count > 2){
         //display error message
         error = true;
     }
     
     if(!error){
-        float m = [self.muInput.text floatValue];
         float n = [self.nInput.text floatValue];
-        NSLog(@"number: %g, %g", m, n);
+        NSLog(@"number: %g", n);
         
         //do calculations
-        float r = [self calculateWithInput:m with:n];
+        float r = [self calculateWithInput:n];
         
         self.outputAnswer.text = [[NSString alloc] initWithFormat:@"%.3e", r];
     }
@@ -94,6 +85,5 @@
         self.outputAnswer.text = @"Error with input";
     }
 }
-
 
 @end

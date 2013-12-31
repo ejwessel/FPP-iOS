@@ -9,5 +9,16 @@
 #import <UIKit/UIKit.h>
 
 @interface IonGyroradiusController : UIViewController
+@property (strong, nonatomic) IBOutlet UILabel *outputRadius;
+@property (strong, nonatomic) IBOutlet UITextField *muInput;
+@property (strong, nonatomic) IBOutlet UITextField *zInput;
+@property (strong, nonatomic) IBOutlet UITextField *tInput;
+@property (strong, nonatomic) IBOutlet UITextField *bInput;
+@property (strong, nonatomic) IBOutlet UILabel *muLabel;
 
+@property const float RADIUS_CONST;
+
+- (float) calculateWithInput: (float)m with:(float)z with:(float)t with:(float)b;
+
+- (void) textChanged:(NSNotification*) note;
 @end

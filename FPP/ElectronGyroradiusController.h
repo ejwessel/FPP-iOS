@@ -9,5 +9,13 @@
 #import <UIKit/UIKit.h>
 
 @interface ElectronGyroradiusController : UIViewController
+@property (strong, nonatomic) IBOutlet UILabel *outputRadius;
+@property (strong, nonatomic) IBOutlet UITextField *tInput;
+@property (strong, nonatomic) IBOutlet UITextField *bInput;
 
+@property const float RADIUS_CONST;
+
+- (float) calculateWithInput: (float)t with:(float)b;
+
+- (void) textChanged:(NSNotification*) note;
 @end

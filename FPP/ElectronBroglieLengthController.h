@@ -9,5 +9,14 @@
 #import <UIKit/UIKit.h>
 
 @interface ElectronBroglieLengthController : UIViewController
+@property (strong, nonatomic) IBOutlet UILabel *lambaLabel;
+@property (strong, nonatomic) IBOutlet UILabel *outputLambda;
+@property (strong, nonatomic) IBOutlet UITextField *tInput;
+
+@property const float LAMBDA_CONST;
+
+- (float) calculateWithInput: (float)t;
+
+- (void) textChanged:(NSNotification*) note;
 
 @end

@@ -13,9 +13,13 @@
 @end
 
 @implementation DebyeLengthController
+@synthesize outputLamda;
+@synthesize tInput;
+@synthesize nInput;
+@synthesize lamdaLabel;
+@synthesize LAMDA_CONST;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
@@ -23,16 +27,74 @@
     return self;
 }
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad{
     [super viewDidLoad];
+    
 	// Do any additional setup after loading the view.
+    self.title = @"Electron Intertial Length";
+    
+    self.LAMDA_CONST = 7.43 * pow(10, 2);
+    
+    self.tInput.text = @"";
+    self.tInput.keyboardType = UIKeyboardTypeDecimalPad;
+    self.tInput.clearButtonMode = true;
+    [self.tInput becomeFirstResponder];
+    
+    self.nInput.text = @"";
+    self.nInput.keyboardType = UIKeyboardTypeDecimalPad;
+    self.nInput.clearButtonMode = true;
+    
+    self.outputLamda.text = @"0";
+    self.outputLamda.layer.borderWidth = 1.0;
+    self.outputLamda.layer.cornerRadius = 5;
+    self.outputLamda.layer.borderColor = self.navigationController.toolbar.tintColor.CGColor;
+    
+    self.lamdaLabel.text = @"\u03BB =";
+    
+    [[NSNotificationCenter defaultCenter]
+     addObserver:self
+     selector:@selector(textChanged:)
+     name:UITextFieldTextDidChangeNotification
+     object:nil];
 }
 
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (float)calculateWithInput:(float)m with:(float)n{
+    return self.LAMDA_CONST * pow(m, 0.5) * pow(n, -0.5);
+}
+
+- (void) textChanged:(NSNotification *)note{
+    
+    NSLog(@"text changed");
+    
+    //do checks...
+    NSArray *chunks1 = [self.tInput.text componentsSeparatedByString:@"."];
+    NSArray *chunks2 = [self.nInput.text componentsSeparatedByString:@"."];
+    Boolean error = false;
+    //check no more than 1 decimal point
+    if(chunks1.count > 2 || chunks2.count > 2){
+        //display error message
+        error = true;
+    }
+    
+    if(!error){
+        float t = [self.tInput.text floatValue];
+        float n = [self.nInput.text floatValue];
+        NSLog(@"number: %g, %g", t, n);
+        
+        //do calculations
+        float r = [self calculateWithInput:t with:n];
+        
+        self.outputLamda.text = [[NSString alloc] initWithFormat:@"%.3e", r];
+    }
+    else{
+        self.outputLamda.text = @"Error with input";
+    }
+}
+
 
 @end
