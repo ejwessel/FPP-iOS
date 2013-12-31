@@ -69,7 +69,7 @@
 }
 
 - (float) calculateFrequencyWithInput:(float)n with:(float)c with:(float)t{
-    return self.VEL_CONST * n * log(c) * pow(t, -3/2);
+    return self.VEL_CONST * n * log(c) * pow(t, -1.5);
 }
 
 - (void) textChanged:(NSNotification *)note{

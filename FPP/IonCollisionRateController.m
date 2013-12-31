@@ -80,7 +80,7 @@
 }
 
 - (float) calculateFrequencyWithInput:(float)z with:(float)m with:(float)n with:(float)c with:(float)t{
-    return self.VEL_CONST * pow(z,4) * pow(m, -.5) * n * log(c) * pow(t, -3/2);
+    return self.VEL_CONST * pow(z,4) * pow(m, -.5) * n * log(c) * pow(t, -1.5);
 }
 
 - (void) textChanged:(NSNotification *)note{
@@ -104,8 +104,8 @@
         float z = [self.zInput.text floatValue];
         float m = [self.muInput.text floatValue];
         float n = [self.nInput.text floatValue];
-        float c = [self.nInput.text floatValue];
-        float t = [self.nInput.text floatValue];
+        float c = [self.coulombInput.text floatValue];
+        float t = [self.tInput.text floatValue];
         NSLog(@"number: %g, %g, %g, %g, %g", z, m, n, c, t);
         
         //do calculations
