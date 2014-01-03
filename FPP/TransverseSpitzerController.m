@@ -19,6 +19,8 @@
 @synthesize tInput;
 @synthesize omegaInput;
 @synthesize VALUE_CONST;
+@synthesize lambaLabel;
+@synthesize omegaLabel;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -32,7 +34,7 @@
     [super viewDidLoad];
     
 	// Do any additional setup after loading the view.
-    self.title = @"Bohm Diffusion Coefficient";
+    self.title = @"Transverse Spitzer Resistivity";
     
     self.VALUE_CONST = 1.03 * pow(10, -2);
     
@@ -57,6 +59,9 @@
     self.outputN.layer.borderWidth = 1.0;
     self.outputN.layer.cornerRadius = 5;
     self.outputN.layer.borderColor = self.navigationController.toolbar.tintColor.CGColor;
+    
+    self.lambaLabel.text = @"\u039B";
+    self.omegaLabel.text = @"\u03A9";
     
     [[NSNotificationCenter defaultCenter]
      addObserver:self

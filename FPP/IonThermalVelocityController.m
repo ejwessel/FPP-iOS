@@ -31,7 +31,7 @@
     [super viewDidLoad];
     
 	// Do any additional setup after loading the view.
-    self.title = @"Electron Thermal Velocity";
+    self.title = @"Ion Thermal Velocity";
     
     self.VELOCITY_CONST = 9.79 * pow(10, 5);
     

@@ -32,7 +32,7 @@
     [super viewDidLoad];
     
 	// Do any additional setup after loading the view.
-    self.title = @"Electron Collision Rate.";
+    self.title = @"Electron Collision Rate";
     
     self.VEL_CONST = 2.91 * pow(10, -6);
     

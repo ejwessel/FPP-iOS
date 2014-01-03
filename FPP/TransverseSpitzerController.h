@@ -14,6 +14,8 @@
 @property (strong, nonatomic) IBOutlet UITextField *lamdaInput;
 @property (strong, nonatomic) IBOutlet UITextField *tInput;
 @property (strong, nonatomic) IBOutlet UITextField *omegaInput;
+@property (strong, nonatomic) IBOutlet UILabel *lambaLabel;
+@property (strong, nonatomic) IBOutlet UILabel *omegaLabel;
 
 @property const float VALUE_CONST;
 

@@ -30,7 +30,7 @@
     [super viewDidLoad];
     
 	// Do any additional setup after loading the view.
-    self.title = @"Thermal Mag. Energy Ratio";
+    self.title = @"Mag./Ion Rest Energy Ratio";
     
     self.VALUE_CONST = 26.5;
     
@@ -51,6 +51,8 @@
     self.outputAnswer.layer.borderWidth = 1.0;
     self.outputAnswer.layer.cornerRadius = 5;
     self.outputAnswer.layer.borderColor = self.navigationController.toolbar.tintColor.CGColor;
+    
+    self.muLabel.text = @"\u03BC";
     
     [[NSNotificationCenter defaultCenter]
      addObserver:self

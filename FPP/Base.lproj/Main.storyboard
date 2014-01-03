@@ -3260,8 +3260,10 @@
                     </scrollView>
                     <navigationItem key="navigationItem" id="5db-wA-HdE"/>
                     <connections>
+                        <outlet property="lambaLabel" destination="jkj-aI-rsc" id="y23-xA-vZJ"/>
                         <outlet property="lamdaInput" destination="YGu-0E-9h1" id="f9s-0Z-T4T"/>
                         <outlet property="omegaInput" destination="A5z-x9-FYe" id="THa-uX-h3s"/>
+                        <outlet property="omegaLabel" destination="Lxv-F7-liR" id="duR-VP-kMg"/>
                         <outlet property="outputN" destination="bfp-IR-QM3" id="JDK-fm-ved"/>
                         <outlet property="tInput" destination="jwb-eP-qxX" id="4zk-QN-MKz"/>
                         <outlet property="zInput" destination="53P-ze-Y4V" id="P2g-Tg-FsC"/>

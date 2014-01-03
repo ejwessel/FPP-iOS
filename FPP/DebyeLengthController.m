@@ -31,7 +31,7 @@
     [super viewDidLoad];
     
 	// Do any additional setup after loading the view.
-    self.title = @"Electron Intertial Length";
+    self.title = @"Debye Length";
     
     self.LAMDA_CONST = 7.43 * pow(10, 2);
     

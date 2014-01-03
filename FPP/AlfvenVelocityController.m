@@ -32,7 +32,7 @@
     [super viewDidLoad];
     
 	// Do any additional setup after loading the view.
-    self.title = @"Ion Sound Velocity";
+    self.title = @"Alfven Velocity";
     
     self.VELOCITY_CONST = 2.18 * pow(10, 11);
     

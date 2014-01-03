@@ -53,6 +53,8 @@
     self.outputAnswer.layer.cornerRadius = 5;
     self.outputAnswer.layer.borderColor = self.navigationController.toolbar.tintColor.CGColor;
     
+    self.muLabel.text = @"\u03BC";
+    
     [[NSNotificationCenter defaultCenter]
      addObserver:self
      selector:@selector(textChanged:)
