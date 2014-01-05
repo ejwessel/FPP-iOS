@@ -13,6 +13,8 @@
 @property (strong, nonatomic) IBOutlet UITextField *muInput;
 @property (strong, nonatomic) IBOutlet UITextField *tInput;
 @property (strong, nonatomic) IBOutlet UILabel *muLabel;
+@property (strong, nonatomic) IBOutlet UITextField *muInputExponent;
+@property (strong, nonatomic) IBOutlet UITextField *tInputExponent;
 
 @property const float VELOCITY_CONST;
 

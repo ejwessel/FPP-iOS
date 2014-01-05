@@ -16,6 +16,10 @@
 @property (strong, nonatomic) IBOutlet UITextField *muInput;
 @property (strong, nonatomic) IBOutlet UILabel *gammaLabel;
 @property (strong, nonatomic) IBOutlet UILabel *muLabel;
+@property (strong, nonatomic) IBOutlet UITextField *tInputExponent;
+@property (strong, nonatomic) IBOutlet UITextField *gammaInputExponent;
+@property (strong, nonatomic) IBOutlet UITextField *zInputExponent;
+@property (strong, nonatomic) IBOutlet UITextField *muInputExponent;
 
 @property const float C_CONST;
 

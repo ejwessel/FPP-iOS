@@ -44,6 +44,14 @@
     self.tInput.keyboardType = UIKeyboardTypeDecimalPad;
     self.tInput.clearButtonMode = true;
     
+    self.muInputExponent.text = @"0";
+    self.muInputExponent.keyboardType = UIKeyboardTypeDecimalPad;
+    self.muInputExponent.clearButtonMode = true;
+    
+    self.tInputExponent.text = @"0";
+    self.tInputExponent.keyboardType = UIKeyboardTypeDecimalPad;
+    self.tInputExponent.clearButtonMode = true;
+    
     self.outputVelocity.text = @"0";
     self.outputVelocity.layer.borderWidth = 1.0;
     self.outputVelocity.layer.cornerRadius = 5;
@@ -74,16 +82,20 @@
     //do checks...
     NSArray *chunks1 = [self.muInput.text componentsSeparatedByString:@"."];
     NSArray *chunks2 = [self.tInput.text componentsSeparatedByString:@"."];
+    NSArray *chunks1Exponent = [self.muInputExponent.text componentsSeparatedByString:@"."];
+    NSArray *chunks2Exponent = [self.tInputExponent.text componentsSeparatedByString:@"."];
     Boolean error = false;
     //check no more than 1 decimal point
-    if(chunks1.count > 2 || chunks2.count > 2){
+    if(chunks1.count > 2 || chunks2.count > 2
+       || chunks1Exponent.count > 1 || chunks2Exponent.count > 1
+       || [self.muInputExponent.text isEqualToString:@""] || [self.tInputExponent.text isEqualToString:@""]){
         //display error message
         error = true;
     }
     
     if(!error){
-        float m = [self.muInput.text floatValue];
-        float t = [self.tInput.text floatValue];
+        float m = [self.muInput.text floatValue] * pow(10, [self.muInputExponent.text floatValue]);
+        float t = [self.tInput.text floatValue] * pow(10, [self.tInputExponent.text floatValue]);
         NSLog(@"number: %g, %g", m, t);
         
         //do calculations
