@@ -10,12 +10,12 @@
 
 @interface ElectronGyrofrequencyController : UIViewController
 
-@property (strong, nonatomic) IBOutlet UITextField *inputValue;
+@property (strong, nonatomic) IBOutlet UITextField *bInput;
 @property (strong, nonatomic) IBOutlet UILabel *outputFrequency;
 @property (strong, nonatomic) IBOutlet UILabel *outputOmega;
 @property (strong, nonatomic) IBOutlet UILabel *frequencyLabel;
 @property (strong, nonatomic) IBOutlet UILabel *omegaLabel;
-@property (strong, nonatomic) IBOutlet UILabel *magneticFieldLabel;
+@property (strong, nonatomic) IBOutlet UITextField *bInputExponent;
 
 @property const float FREQ_CONST;
 @property const float OMEGA_CONST;

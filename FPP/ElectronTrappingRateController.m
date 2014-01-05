@@ -19,6 +19,8 @@
 @synthesize outputVelocity;
 @synthesize velocityLabel;
 @synthesize VEL_CONST;
+@synthesize kInputExponent;
+@synthesize eInputExponent;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -44,6 +46,14 @@
     self.eInput.text = @"";
     self.eInput.keyboardType = UIKeyboardTypeDecimalPad;
     self.eInput.clearButtonMode = true;
+    
+    self.kInputExponent.text = @"0";
+    self.kInputExponent.keyboardType = UIKeyboardTypeDecimalPad;
+    self.kInputExponent.clearButtonMode = true;
+    
+    self.eInputExponent.text = @"0";
+    self.eInputExponent.keyboardType = UIKeyboardTypeDecimalPad;
+    self.eInputExponent.clearButtonMode = true;
     
     self.outputVelocity.text = @"0";
     self.outputVelocity.layer.borderWidth = 1.0;
@@ -73,16 +83,20 @@
     //do checks...
     NSArray *chunks1 = [self.kInput.text componentsSeparatedByString:@"."];
     NSArray *chunks2 = [self.eInput.text componentsSeparatedByString:@"."];
+    NSArray *chunks1Exponent = [self.kInputExponent.text componentsSeparatedByString:@"."];
+    NSArray *chunks2Exponent = [self.eInputExponent.text componentsSeparatedByString:@"."];
     Boolean error = false;
     //check no more than 1 decimal point
-    if(chunks1.count > 2 || chunks2.count > 2){
+    if(chunks1.count > 2 || chunks2.count > 2
+       || chunks1Exponent.count > 1 || chunks2Exponent.count > 1
+       || [self.kInputExponent.text isEqualToString:@""] || [self.eInputExponent.text isEqualToString:@""]){
         //display error message
         error = true;
     }
     
     if(!error){
-        float k = [self.kInput.text floatValue];
-        float e = [self.eInput.text floatValue];
+        float k = [self.kInput.text floatValue] * pow(10, [self.kInputExponent.text floatValue]);
+        float e = [self.eInput.text floatValue] * pow(10, [self.eInputExponent.text floatValue]);
         NSLog(@"number: %g, %g", k, e);
         
         //do calculations

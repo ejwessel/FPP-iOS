@@ -21,6 +21,11 @@
 @synthesize coulombInput;
 @synthesize tInput;
 @synthesize VEL_CONST;
+@synthesize zInputExponent;
+@synthesize muInputExponent;
+@synthesize nInputExponent;
+@synthesize coulombInputExponent;
+@synthesize tInputExponent;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -59,13 +64,33 @@
     self.tInput.keyboardType = UIKeyboardTypeDecimalPad;
     self.tInput.clearButtonMode = true;
     
+    self.zInputExponent.text = @"0";
+    self.zInputExponent.keyboardType = UIKeyboardTypeDecimalPad;
+    self.zInputExponent.clearButtonMode = true;
+    
+    self.muInputExponent.text = @"0";
+    self.muInputExponent.keyboardType = UIKeyboardTypeDecimalPad;
+    self.muInputExponent.clearButtonMode = true;
+    
+    self.nInputExponent.text = @"0";
+    self.nInputExponent.keyboardType = UIKeyboardTypeDecimalPad;
+    self.nInputExponent.clearButtonMode = true;
+    
+    self.coulombInputExponent.text = @"0";
+    self.coulombInputExponent.keyboardType = UIKeyboardTypeDecimalPad;
+    self.coulombInputExponent.clearButtonMode = true;
+    
+    self.tInputExponent.text = @"0";
+    self.tInputExponent.keyboardType = UIKeyboardTypeDecimalPad;
+    self.tInputExponent.clearButtonMode = true;
+    
     self.outputVelocity.text = @"0";
     self.outputVelocity.layer.borderWidth = 1.0;
     self.outputVelocity.layer.cornerRadius = 5;
     self.outputVelocity.layer.borderColor = self.navigationController.toolbar.tintColor.CGColor;
     
     self.muLabel.text = @"\u03BC";
-    self.coulombLabel.text = @"\u039B";
+    self.coulombLabel.text = @"ln\u039B =";
     
     [[NSNotificationCenter defaultCenter]
      addObserver:self
@@ -93,19 +118,26 @@
     NSArray *chunks3 = [self.nInput.text componentsSeparatedByString:@"."];
     NSArray *chunks4 = [self.coulombInput.text componentsSeparatedByString:@"."];
     NSArray *chunks5 = [self.tInput.text componentsSeparatedByString:@"."];
+    NSArray *chunks1Exponent = [self.zInputExponent.text componentsSeparatedByString:@"."];
+    NSArray *chunks2Exponent = [self.muInputExponent.text componentsSeparatedByString:@"."];
+    NSArray *chunks3Exponent = [self.nInputExponent.text componentsSeparatedByString:@"."];
+    NSArray *chunks4Exponent = [self.coulombInputExponent.text componentsSeparatedByString:@"."];
+    NSArray *chunks5Exponent = [self.tInputExponent.text componentsSeparatedByString:@"."];
     Boolean error = false;
     //check no more than 1 decimal point
-    if(chunks1.count > 2 || chunks2.count > 2 || chunks3.count > 2 || chunks4.count > 2 || chunks5.count > 2){
+    if(chunks1.count > 2 || chunks2.count > 2 || chunks3.count > 2 || chunks4.count > 2 || chunks5.count > 2
+       || chunks1Exponent.count > 1 || chunks2Exponent.count > 1 || chunks3Exponent.count > 1 || chunks4Exponent.count > 1 || chunks5Exponent.count > 1
+       || [self.zInputExponent.text isEqualToString:@""] || [self.muInputExponent.text isEqualToString:@""] || [self.nInputExponent.text isEqualToString:@""] || [self.coulombInputExponent.text isEqualToString:@""] || [self.tInputExponent.text isEqualToString:@""]){
         //display error message
         error = true;
     }
     
     if(!error){
-        float z = [self.zInput.text floatValue];
-        float m = [self.muInput.text floatValue];
-        float n = [self.nInput.text floatValue];
-        float c = [self.coulombInput.text floatValue];
-        float t = [self.tInput.text floatValue];
+        float z = [self.zInput.text floatValue] * pow(10, [self.zInputExponent.text floatValue]);
+        float m = [self.muInput.text floatValue] * pow(10, [self.muInputExponent.text floatValue]);
+        float n = [self.nInput.text floatValue] * pow(10, [self.nInputExponent.text floatValue]);
+        float c = [self.coulombInput.text floatValue] * pow(10, [self.coulombInputExponent.text floatValue]);
+        float t = [self.tInput.text floatValue] * pow(10, [self.tInputExponent.text floatValue]);
         NSLog(@"number: %g, %g, %g, %g, %g", z, m, n, c, t);
         
         //do calculations

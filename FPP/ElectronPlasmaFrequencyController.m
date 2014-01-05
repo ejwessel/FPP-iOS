@@ -22,6 +22,7 @@
 @synthesize nLabel;
 @synthesize FREQ_CONST;
 @synthesize OMEGA_CONST;
+@synthesize inputValueExponent;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -45,6 +46,10 @@
     self.inputValue.keyboardType = UIKeyboardTypeDecimalPad;
     self.inputValue.clearButtonMode = true;
     [self.inputValue becomeFirstResponder];
+    
+    self.inputValueExponent.text = @"0";
+    self.inputValueExponent.keyboardType = UIKeyboardTypeDecimalPad;
+    self.inputValueExponent.clearButtonMode = true;
     
     self.outputFrequency.text = @"0";
     self.outputFrequency.layer.borderWidth = 1.0;
@@ -85,15 +90,18 @@
     
     //do checks...
     NSArray *chunks = [self.inputValue.text componentsSeparatedByString:@"."];
+    NSArray *chunksExponent = [self.inputValueExponent.text componentsSeparatedByString:@"."];
     Boolean error = false;
     //check no more than 1 decimal point
-    if(chunks.count > 2){
+    if(chunks.count > 2
+       || chunksExponent.count > 1
+       || [self.inputValueExponent.text isEqualToString:@""]){
         //display error message
         error = true;
     }
     
     if(!error){
-        float B = [self.inputValue.text floatValue];
+        float B = [self.inputValue.text floatValue] * pow(10, [self.inputValueExponent.text floatValue]);
         NSLog(@"number: %g", B);
         
         //do calculations

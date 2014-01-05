@@ -19,6 +19,9 @@
 @synthesize tInput;
 @synthesize VEL_CONST;
 @synthesize coulombLabel;
+@synthesize nInputExponent;
+@synthesize coulombInputExponent;
+@synthesize tInputExponent;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -49,12 +52,24 @@
     self.tInput.keyboardType = UIKeyboardTypeDecimalPad;
     self.tInput.clearButtonMode = true;
     
+    self.nInputExponent.text = @"0";
+    self.nInputExponent.keyboardType = UIKeyboardTypeDecimalPad;
+    self.nInputExponent.clearButtonMode = true;
+    
+    self.coulombInputExponent.text = @"0";
+    self.coulombInputExponent.keyboardType = UIKeyboardTypeDecimalPad;
+    self.coulombInputExponent.clearButtonMode = true;
+    
+    self.tInputExponent.text = @"0";
+    self.tInputExponent.keyboardType = UIKeyboardTypeDecimalPad;
+    self.tInputExponent.clearButtonMode = true;
+    
     self.outputVelocity.text = @"0";
     self.outputVelocity.layer.borderWidth = 1.0;
     self.outputVelocity.layer.cornerRadius = 5;
     self.outputVelocity.layer.borderColor = self.navigationController.toolbar.tintColor.CGColor;
     
-    self.coulombLabel.text = @"\u039B";
+    self.coulombLabel.text = @"ln\u039B =";
     
     [[NSNotificationCenter defaultCenter]
      addObserver:self
@@ -69,7 +84,7 @@
 }
 
 - (float) calculateFrequencyWithInput:(float)n with:(float)c with:(float)t{
-    return self.VEL_CONST * n * log(c) * pow(t, -1.5);
+    return self.VEL_CONST * n * c * pow(t, -1.5);
 }
 
 - (void) textChanged:(NSNotification *)note{
@@ -80,17 +95,22 @@
     NSArray *chunks1 = [self.nInput.text componentsSeparatedByString:@"."];
     NSArray *chunks2 = [self.coulombInput.text componentsSeparatedByString:@"."];
     NSArray *chunks3 = [self.tInput.text componentsSeparatedByString:@"."];
+    NSArray *chunks1Exponent = [self.nInputExponent.text componentsSeparatedByString:@"."];
+    NSArray *chunks2Exponent = [self.coulombInputExponent.text componentsSeparatedByString:@"."];
+    NSArray *chunks3Exponent = [self.tInputExponent.text componentsSeparatedByString:@"."];
     Boolean error = false;
     //check no more than 1 decimal point
-    if(chunks1.count > 2 || chunks2.count > 2 || chunks3.count >2){
+    if(chunks1.count > 2 || chunks2.count > 2 || chunks3.count >2
+       || chunks1Exponent.count > 1 || chunks2Exponent.count > 1 || chunks3Exponent.count > 1
+       || [self.nInputExponent.text isEqualToString:@""] || [self.coulombInputExponent.text isEqualToString:@""] || [self.tInputExponent.text isEqualToString:@""]){
         //display error message
         error = true;
     }
     
     if(!error){
-        float n = [self.nInput.text floatValue];
-        float c = [self.coulombInput.text floatValue];
-        float t = [self.tInput.text floatValue];
+        float n = [self.nInput.text floatValue] * pow(10, [self.nInputExponent.text floatValue]);
+        float c = [self.coulombInput.text floatValue] * pow(10, [self.coulombInputExponent.text floatValue]);
+        float t = [self.tInput.text floatValue] * pow(10, [self.tInputExponent.text floatValue]);
         NSLog(@"number: %g, %g, %g", n, c, t);
         
         //do calculations

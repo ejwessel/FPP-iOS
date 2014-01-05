@@ -10,6 +10,7 @@
 
 @interface ElectronPlasmaFrequencyController : UIViewController
 @property (strong, nonatomic) IBOutlet UITextField *inputValue;
+@property (strong, nonatomic) IBOutlet UITextField *inputValueExponent;
 @property (strong, nonatomic) IBOutlet UILabel *outputFrequency;
 @property (strong, nonatomic) IBOutlet UILabel *outputOmega;
 @property (strong, nonatomic) IBOutlet UILabel *frequencyLabel;

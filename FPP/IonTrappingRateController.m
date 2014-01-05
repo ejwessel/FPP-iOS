@@ -22,6 +22,10 @@
 @synthesize velocityLabel;
 @synthesize VEL_CONST;
 @synthesize muLabel;
+@synthesize zInputExponent;
+@synthesize kInputExponent;
+@synthesize eInputExponent;
+@synthesize muInputExponent;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -55,6 +59,22 @@
     self.muInput.text = @"";
     self.muInput.keyboardType = UIKeyboardTypeDecimalPad;
     self.muInput.clearButtonMode = true;
+
+    self.zInputExponent.text = @"0";
+    self.zInputExponent.keyboardType = UIKeyboardTypeDecimalPad;
+    self.zInputExponent.clearButtonMode = true;
+    
+    self.kInputExponent.text = @"0";
+    self.kInputExponent.keyboardType = UIKeyboardTypeDecimalPad;
+    self.kInputExponent.clearButtonMode = true;
+    
+    self.eInputExponent.text = @"0";
+    self.eInputExponent.keyboardType = UIKeyboardTypeDecimalPad;
+    self.eInputExponent.clearButtonMode = true;
+    
+    self.muInputExponent.text = @"0";
+    self.muInputExponent.keyboardType = UIKeyboardTypeDecimalPad;
+    self.muInputExponent.clearButtonMode = true;
     
     self.outputVelocity.text = @"0";
     self.outputVelocity.layer.borderWidth = 1.0;
@@ -88,18 +108,24 @@
     NSArray *chunks2 = [self.kInput.text componentsSeparatedByString:@"."];
     NSArray *chunks3 = [self.eInput.text componentsSeparatedByString:@"."];
     NSArray *chunks4 = [self.muInput.text componentsSeparatedByString:@"."];
+    NSArray *chunks1Exponent = [self.zInputExponent.text componentsSeparatedByString:@"."];
+    NSArray *chunks2Exponent = [self.kInputExponent.text componentsSeparatedByString:@"."];
+    NSArray *chunks3Exponent = [self.eInputExponent.text componentsSeparatedByString:@"."];
+    NSArray *chunks4Exponent = [self.muInputExponent.text componentsSeparatedByString:@"."];
     Boolean error = false;
     //check no more than 1 decimal point
-    if(chunks1.count > 2 || chunks2.count > 2 || chunks3.count >2 || chunks4.count > 2){
+    if(chunks1.count > 2 || chunks2.count > 2 || chunks3.count >2 || chunks4.count > 2
+       || chunks1Exponent.count > 1 || chunks2Exponent.count > 1 || chunks3Exponent.count > 1 || chunks4Exponent.count > 1
+       || [self.zInputExponent.text isEqualToString:@""] || [self.kInputExponent.text isEqualToString:@""] || [self.eInputExponent.text isEqualToString:@""] || [self.muInputExponent.text isEqualToString:@""]){
         //display error message
         error = true;
     }
     
     if(!error){
-        float z = [self.zInput.text floatValue];
-        float k = [self.kInput.text floatValue];
-        float e = [self.eInput.text floatValue];
-        float m = [self.muInput.text floatValue];
+        float z = [self.zInput.text floatValue] * pow(10, [self.zInputExponent.text floatValue]);
+        float k = [self.kInput.text floatValue] * pow(10, [self.kInputExponent.text floatValue]);
+        float e = [self.eInput.text floatValue] * pow(10, [self.eInputExponent.text floatValue]);
+        float m = [self.muInput.text floatValue] * pow(10, [self.muInputExponent.text floatValue]);
         NSLog(@"number: %g, %g, %g, %g", z, k, e, m);
         
         //do calculations

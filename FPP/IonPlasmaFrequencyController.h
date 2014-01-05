@@ -18,6 +18,9 @@
 @property (strong, nonatomic) IBOutlet UILabel *frequencyLabel;
 @property (strong, nonatomic) IBOutlet UILabel *omegaLabel;
 @property (strong, nonatomic) IBOutlet UILabel *muLabel;
+@property (strong, nonatomic) IBOutlet UITextField *zInputExponent;
+@property (strong, nonatomic) IBOutlet UITextField *muInputExponent;
+@property (strong, nonatomic) IBOutlet UITextField *nInputExponent;
 
 @property const float FREQ_CONST;
 @property const float OMEGA_CONST;

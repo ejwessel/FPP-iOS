@@ -14,12 +14,12 @@
 
 @implementation ElectronGyrofrequencyController
 
-@synthesize inputValue;
+@synthesize bInput;
 @synthesize outputFrequency;
 @synthesize outputOmega;
 @synthesize frequencyLabel;
 @synthesize omegaLabel;
-@synthesize magneticFieldLabel;
+@synthesize bInputExponent;
 @synthesize FREQ_CONST;
 @synthesize OMEGA_CONST;
 
@@ -41,10 +41,14 @@
     self.OMEGA_CONST = 1.76 * pow(10, 7);
 
     
-    self.inputValue.text = @"";
-    self.inputValue.keyboardType = UIKeyboardTypeDecimalPad;
-    self.inputValue.clearButtonMode = true;
-    [self.inputValue becomeFirstResponder];
+    self.bInput.text = @"";
+    self.bInput.keyboardType = UIKeyboardTypeDecimalPad;
+    self.bInput.clearButtonMode = true;
+    [self.bInput becomeFirstResponder];
+    
+    self.bInputExponent.text = @"0";
+    self.bInputExponent.keyboardType = UIKeyboardTypeDecimalPad;
+    self.bInputExponent.clearButtonMode = true;
     
     self.outputFrequency.text = @"0";
     self.outputFrequency.layer.borderWidth = 1.0;
@@ -84,16 +88,18 @@
     NSLog(@"text changed");
     
     //do checks...
-    NSArray *chunks = [self.inputValue.text componentsSeparatedByString:@"."];
+    NSArray *chunks = [self.bInput.text componentsSeparatedByString:@"."];
+    NSArray *chunksExponent = [self.bInputExponent.text componentsSeparatedByString:@"."];
     Boolean error = false;
     //check no more than 1 decimal point
-    if(chunks.count > 2){
+    if(chunks.count > 2
+       || chunksExponent.count > 1 || [self.bInputExponent.text isEqualToString:@""]){
         //display error message
         error = true;
     }
     
     if(!error){
-        float B = [self.inputValue.text floatValue];
+        float B = [self.bInput.text floatValue] * pow(10, [self.bInputExponent.text floatValue]);
         NSLog(@"number: %g", B);
         
         //do calculations

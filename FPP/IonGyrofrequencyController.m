@@ -14,9 +14,9 @@
 
 @implementation IonGyrofrequencyController
 
-@synthesize inputValue1;
-@synthesize inputValue2;
-@synthesize inputValue3;
+@synthesize zInput;
+@synthesize muInput;
+@synthesize bInput;
 @synthesize outputFrequency;
 @synthesize outputOmega;
 @synthesize frequencyLabel;
@@ -26,6 +26,9 @@
 @synthesize zetaLabel;
 @synthesize FREQ_CONST;
 @synthesize OMEGA_CONST;
+@synthesize bInputExponent;
+@synthesize muInputExponent;
+@synthesize zInputExponent;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -44,18 +47,30 @@
     self.FREQ_CONST = 1.52 * pow(10, 3);
     self.OMEGA_CONST = 9.58 * pow(10, 3);
 
-    self.inputValue1.text = @"";
-    self.inputValue1.keyboardType = UIKeyboardTypeDecimalPad;
-    self.inputValue1.clearButtonMode = true;
-    [self.inputValue1 becomeFirstResponder];
+    self.zInput.text = @"";
+    self.zInput.keyboardType = UIKeyboardTypeDecimalPad;
+    self.zInput.clearButtonMode = true;
+    [self.zInput becomeFirstResponder];
 
-    self.inputValue2.text = @"";
-    self.inputValue2.keyboardType = UIKeyboardTypeDecimalPad;
-    self.inputValue2.clearButtonMode = true;
+    self.muInput.text = @"";
+    self.muInput.keyboardType = UIKeyboardTypeDecimalPad;
+    self.muInput.clearButtonMode = true;
     
-    self.inputValue3.text = @"";
-    self.inputValue3.keyboardType = UIKeyboardTypeDecimalPad;
-    self.inputValue3.clearButtonMode = true;
+    self.bInput.text = @"";
+    self.bInput.keyboardType = UIKeyboardTypeDecimalPad;
+    self.bInput.clearButtonMode = true;
+    
+    self.zInputExponent.text = @"0";
+    self.zInputExponent.keyboardType = UIKeyboardTypeDecimalPad;
+    self.zInputExponent.clearButtonMode = true;
+    
+    self.muInputExponent.text = @"0";
+    self.muInputExponent.keyboardType = UIKeyboardTypeDecimalPad;
+    self.muInputExponent.clearButtonMode = true;
+    
+    self.bInputExponent.text = @"0";
+    self.bInputExponent.keyboardType = UIKeyboardTypeDecimalPad;
+    self.bInputExponent.clearButtonMode = true;
     
     self.outputFrequency.text = @"0";
     self.outputFrequency.layer.borderWidth = 1.0;
@@ -96,20 +111,25 @@
     NSLog(@"text changed");
     
     //do checks...
-    NSArray *chunks1 = [self.inputValue1.text componentsSeparatedByString:@"."];
-    NSArray *chunks2 = [self.inputValue2.text componentsSeparatedByString:@"."];
-    NSArray *chunks3 = [self.inputValue3.text componentsSeparatedByString:@"."];
+    NSArray *chunks1 = [self.zInput.text componentsSeparatedByString:@"."];
+    NSArray *chunks2 = [self.muInput.text componentsSeparatedByString:@"."];
+    NSArray *chunks3 = [self.bInput.text componentsSeparatedByString:@"."];
+    NSArray *chunks1Exponent = [self.zInputExponent.text componentsSeparatedByString:@"."];
+    NSArray *chunks2Exponent = [self.muInputExponent.text componentsSeparatedByString:@"."];
+    NSArray *chunks3Exponent = [self.bInputExponent.text componentsSeparatedByString:@"."];
     Boolean error = false;
     //check no more than 1 decimal point
-    if(chunks1.count > 2 || chunks2.count > 2 || chunks3.count > 2){
+    if(chunks1.count > 2 || chunks2.count > 2 || chunks3.count > 2
+       || chunks1Exponent.count > 1 || chunks2Exponent.count > 1 || chunks3Exponent.count > 1
+       || [self.zInputExponent.text isEqualToString:@""] || [self.muInputExponent.text isEqualToString:@""] || [self.bInputExponent.text isEqualToString:@""]){
         //display error message
         error = true;
     }
     
     if(!error){
-        float B = [self.inputValue1.text floatValue];
-        float m = [self.inputValue2.text floatValue];
-        float z = [self.inputValue3.text floatValue];
+        float B = [self.zInput.text floatValue] * pow(10, [self.zInputExponent.text floatValue]);
+        float m = [self.muInput.text floatValue] * pow(10, [self.muInputExponent.text floatValue]);
+        float z = [self.bInput.text floatValue] * pow(10, [self.bInputExponent.text floatValue]);
         NSLog(@"number: %g, %g, %g", B, m, z);
         
         //do calculations

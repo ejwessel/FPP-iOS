@@ -17,6 +17,11 @@
 @property (strong, nonatomic) IBOutlet UITextField *tInput;
 @property (strong, nonatomic) IBOutlet UILabel *muLabel;
 @property (strong, nonatomic) IBOutlet UILabel *coulombLabel;
+@property (strong, nonatomic) IBOutlet UITextField *zInputExponent;
+@property (strong, nonatomic) IBOutlet UITextField *muInputExponent;
+@property (strong, nonatomic) IBOutlet UITextField *nInputExponent;
+@property (strong, nonatomic) IBOutlet UITextField *coulombInputExponent;
+@property (strong, nonatomic) IBOutlet UITextField *tInputExponent;
 
 @property const float VEL_CONST;
 

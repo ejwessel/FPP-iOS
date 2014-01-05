@@ -14,6 +14,8 @@
 @property (strong, nonatomic) IBOutlet UITextField *eInput;
 @property (strong, nonatomic) IBOutlet UILabel *outputVelocity;
 @property (strong, nonatomic) IBOutlet UILabel *velocityLabel;
+@property (strong, nonatomic) IBOutlet UITextField *kInputExponent;
+@property (strong, nonatomic) IBOutlet UITextField *eInputExponent;
 
 @property const float VEL_CONST;
 
