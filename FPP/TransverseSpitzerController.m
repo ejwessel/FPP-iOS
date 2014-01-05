@@ -21,6 +21,10 @@
 @synthesize VALUE_CONST;
 @synthesize lambaLabel;
 @synthesize omegaLabel;
+@synthesize zInputExponent;
+@synthesize lambdaInputExponent;
+@synthesize tInputExponent;
+@synthesize omegaInputExponent;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -55,12 +59,28 @@
     self.omegaInput.keyboardType = UIKeyboardTypeDecimalPad;
     self.omegaInput.clearButtonMode = true;
     
+    self.zInputExponent.text = @"0";
+    self.zInputExponent.keyboardType = UIKeyboardTypeDecimalPad;
+    self.zInputExponent.clearButtonMode = true;
+    
+    self.lambdaInputExponent.text = @"0";
+    self.lambdaInputExponent.keyboardType = UIKeyboardTypeDecimalPad;
+    self.lambdaInputExponent.clearButtonMode = true;
+    
+    self.tInputExponent.text = @"0";
+    self.tInputExponent.keyboardType = UIKeyboardTypeDecimalPad;
+    self.tInputExponent.clearButtonMode = true;
+    
+    self.omegaInputExponent.text = @"0";
+    self.omegaInputExponent.keyboardType = UIKeyboardTypeDecimalPad;
+    self.omegaInputExponent.clearButtonMode = true;
+    
     self.outputN.text = @"0";
     self.outputN.layer.borderWidth = 1.0;
     self.outputN.layer.cornerRadius = 5;
     self.outputN.layer.borderColor = self.navigationController.toolbar.tintColor.CGColor;
     
-    self.lambaLabel.text = @"\u039B";
+    self.lambaLabel.text = @"ln\u039B =";
     self.omegaLabel.text = @"\u03A9";
     
     [[NSNotificationCenter defaultCenter]
@@ -76,7 +96,7 @@
 }
 
 - (float) calculateWithInput:(float)z with:(float)l with:(float)t with:(float)o{
-    return self.VALUE_CONST * z * log(l) * pow(t, -1.5) * o;
+    return self.VALUE_CONST * z * l * pow(t, -1.5) * o;
 }
 
 - (void) textChanged:(NSNotification *)note{
@@ -88,18 +108,24 @@
     NSArray *chunks2 = [self.lamdaInput.text componentsSeparatedByString:@"."];
     NSArray *chunks3 = [self.tInput.text componentsSeparatedByString:@"."];
     NSArray *chunks4 = [self.omegaInput.text componentsSeparatedByString:@"."];
+    NSArray *chunks1Exponent = [self.zInputExponent.text componentsSeparatedByString:@"."];
+    NSArray *chunks2Exponent = [self.lambdaInputExponent.text componentsSeparatedByString:@"."];
+    NSArray *chunks3Exponent = [self.tInputExponent.text componentsSeparatedByString:@"."];
+    NSArray *chunks4Exponent = [self.omegaInputExponent.text componentsSeparatedByString:@"."];
     Boolean error = false;
     //check no more than 1 decimal point
-    if(chunks1.count > 2 || chunks2.count > 2 || chunks3.count > 2 || chunks4.count > 2){
+    if(chunks1.count > 2 || chunks2.count > 2 || chunks3.count > 2 || chunks4.count > 2
+       || chunks1Exponent.count > 1 || chunks2Exponent.count > 1 || chunks3Exponent.count > 1 || chunks4Exponent.count > 1
+       || [self.zInputExponent.text isEqualToString:@""] || [self.lambdaInputExponent.text isEqualToString:@""] || [self.tInputExponent.text isEqualToString:@""] || [self.omegaInputExponent.text isEqualToString:@""]){
         //display error message
         error = true;
     }
     
     if(!error){
-        float z = [self.zInput.text floatValue];
-        float l = [self.lamdaInput.text floatValue];
-        float t = [self.tInput.text floatValue];
-        float o = [self.omegaInput.text floatValue];
+        float z = [self.zInput.text floatValue] * pow(10, [self.zInputExponent.text floatValue]);
+        float l = [self.lamdaInput.text floatValue] * pow(10, [self.lambdaInputExponent.text floatValue]);
+        float t = [self.tInput.text floatValue] * pow(10, [self.tInputExponent.text floatValue]);
+        float o = [self.omegaInput.text floatValue] * pow(10, [self.omegaInputExponent.text floatValue]);
         NSLog(@"number: %g, %g, %g, %g", z, l, t, o);
         
         //do calculations

@@ -13,6 +13,9 @@
 @property (strong, nonatomic) IBOutlet UITextField *nInput;
 @property (strong, nonatomic) IBOutlet UITextField *tInput;
 @property (strong, nonatomic) IBOutlet UITextField *bInput;
+@property (strong, nonatomic) IBOutlet UITextField *nInputExponent;
+@property (strong, nonatomic) IBOutlet UITextField *tInputExponent;
+@property (strong, nonatomic) IBOutlet UITextField *bInputExponent;
 
 @property const float VALUE_CONST;
 

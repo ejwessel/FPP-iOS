@@ -17,6 +17,8 @@
 @synthesize nInput;
 @synthesize bInput;
 @synthesize VALUE_CONST;
+@synthesize nInputExponent;
+@synthesize bInputExponent;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -42,6 +44,14 @@
     self.bInput.text = @"";
     self.bInput.keyboardType = UIKeyboardTypeDecimalPad;
     self.bInput.clearButtonMode = true;
+    
+    self.nInputExponent.text = @"0";
+    self.nInputExponent.keyboardType = UIKeyboardTypeDecimalPad;
+    self.nInputExponent.clearButtonMode = true;
+    
+    self.bInputExponent.text = @"0";
+    self.bInputExponent.keyboardType = UIKeyboardTypeDecimalPad;
+    self.bInputExponent.clearButtonMode = true;
     
     self.outputAnswer.text = @"0";
     self.outputAnswer.layer.borderWidth = 1.0;
@@ -71,16 +81,20 @@
     //do checks...
     NSArray *chunks1 = [self.nInput.text componentsSeparatedByString:@"."];
     NSArray *chunks2 = [self.bInput.text componentsSeparatedByString:@"."];
+    NSArray *chunks1Exponent = [self.nInputExponent.text componentsSeparatedByString:@"."];
+    NSArray *chunks2Exponent = [self.bInputExponent.text componentsSeparatedByString:@"."];
     Boolean error = false;
     //check no more than 1 decimal point
-    if(chunks1.count > 2 || chunks2.count > 2){
+    if(chunks1.count > 2 || chunks2.count > 2
+       || chunks1Exponent.count > 1 || chunks2Exponent.count > 1
+       || [self.nInputExponent.text isEqualToString:@""] || [self.bInputExponent.text isEqualToString:@""]){
         //display error message
         error = true;
     }
     
     if(!error){
-        float n = [self.nInput.text floatValue];
-        float b = [self.bInput.text floatValue];
+        float n = [self.nInput.text floatValue] * pow(10, [self.nInputExponent.text floatValue]);
+        float b = [self.bInput.text floatValue] * pow(10, [self.bInputExponent.text floatValue]);
         NSLog(@"number: %g, %g", n, b);
         
         //do calculations
