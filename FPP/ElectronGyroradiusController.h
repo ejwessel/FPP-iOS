@@ -12,6 +12,8 @@
 @property (strong, nonatomic) IBOutlet UILabel *outputRadius;
 @property (strong, nonatomic) IBOutlet UITextField *tInput;
 @property (strong, nonatomic) IBOutlet UITextField *bInput;
+@property (strong, nonatomic) IBOutlet UITextField *tInputExponent;
+@property (strong, nonatomic) IBOutlet UITextField *bInputExponent;
 
 @property const float RADIUS_CONST;
 

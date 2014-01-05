@@ -12,6 +12,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *lambaLabel;
 @property (strong, nonatomic) IBOutlet UILabel *outputLambda;
 @property (strong, nonatomic) IBOutlet UITextField *tInput;
+@property (strong, nonatomic) IBOutlet UITextField *tInputExponent;
 
 @property const float LAMBDA_CONST;
 

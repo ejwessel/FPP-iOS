@@ -11,6 +11,7 @@
 @interface ClassicalDistanceMinimumApproachController : UIViewController
 @property (strong, nonatomic) IBOutlet UILabel *outputAnswer;
 @property (strong, nonatomic) IBOutlet UITextField *tInput;
+@property (strong, nonatomic) IBOutlet UITextField *tInputExponent;
 
 @property const float CONST_VALUE;
 

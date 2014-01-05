@@ -16,6 +16,7 @@
 @synthesize outputAnswer;
 @synthesize nInput;
 @synthesize CONST_VALUE;
+@synthesize nInputExponent;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -38,6 +39,10 @@
     self.nInput.clearButtonMode = true;
     [self.nInput becomeFirstResponder];
 
+    self.nInputExponent.text = @"0";
+    self.nInputExponent.keyboardType = UIKeyboardTypeDecimalPad;
+    self.nInputExponent.clearButtonMode = true;
+    
     self.outputAnswer.text = @"0";
     self.outputAnswer.layer.borderWidth = 1.0;
     self.outputAnswer.layer.cornerRadius = 5;
@@ -65,15 +70,18 @@
     
     //do checks...
     NSArray *chunks = [self.nInput.text componentsSeparatedByString:@"."];
+    NSArray *chunksExponent = [self.nInputExponent.text componentsSeparatedByString:@"."];
     Boolean error = false;
     //check no more than 1 decimal point
-    if(chunks.count > 2){
+    if(chunks.count > 2
+       || chunksExponent.count > 1
+       || [self.nInputExponent.text isEqualToString:@""]){
         //display error message
         error = true;
     }
     
     if(!error){
-        float n = [self.nInput.text floatValue];
+        float n = [self.nInput.text floatValue] * pow(10,[self.nInputExponent.text floatValue]);
         NSLog(@"number: %g", n);
         
         //do calculations

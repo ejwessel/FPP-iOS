@@ -54,6 +54,22 @@
     self.bInput.keyboardType = UIKeyboardTypeDecimalPad;
     self.bInput.clearButtonMode = true;
     
+    self.muInputExponent.text = @"0";
+    self.muInputExponent.keyboardType = UIKeyboardTypeDecimalPad;
+    self.muInputExponent.clearButtonMode = true;
+    
+    self.zInputExponent.text = @"0";
+    self.zInputExponent.keyboardType = UIKeyboardTypeDecimalPad;
+    self.zInputExponent.clearButtonMode = true;
+    
+    self.tInputExponent.text = @"0";
+    self.tInputExponent.keyboardType = UIKeyboardTypeDecimalPad;
+    self.tInputExponent.clearButtonMode = true;
+    
+    self.bInputExponent.text = @"0";
+    self.bInputExponent.keyboardType = UIKeyboardTypeDecimalPad;
+    self.bInputExponent.clearButtonMode = true;
+    
     self.outputRadius.text = @"0";
     self.outputRadius.layer.borderWidth = 1.0;
     self.outputRadius.layer.cornerRadius = 5;
@@ -86,18 +102,24 @@
     NSArray *chunks2 = [self.zInput.text componentsSeparatedByString:@"."];
     NSArray *chunks3 = [self.tInput.text componentsSeparatedByString:@"."];
     NSArray *chunks4 = [self.bInput.text componentsSeparatedByString:@"."];
+    NSArray *chunks1Exponent = [self.muInputExponent.text componentsSeparatedByString:@"."];
+    NSArray *chunks2Exponent = [self.zInputExponent.text componentsSeparatedByString:@"."];
+    NSArray *chunks3Exponent = [self.tInputExponent.text componentsSeparatedByString:@"."];
+    NSArray *chunks4Exponent = [self.bInputExponent.text componentsSeparatedByString:@"."];
     Boolean error = false;
     //check no more than 1 decimal point
-    if(chunks1.count > 2 || chunks2.count > 2 || chunks3.count > 2 || chunks4.count > 2){
+    if(chunks1.count > 2 || chunks2.count > 2 || chunks3.count > 2 || chunks4.count > 2
+       || chunks1Exponent.count > 1 || chunks2Exponent.count > 1 || chunks3Exponent.count > 1 || chunks4Exponent.count > 1
+       || [self.muInputExponent.text isEqualToString:@""] || [self.zInputExponent.text isEqualToString:@""] || [self.tInputExponent.text isEqualToString:@""] || [self.bInputExponent.text isEqualToString:@""]){
         //display error message
         error = true;
     }
     
     if(!error){
-        float m = [self.muInput.text floatValue];
-        float z = [self.zInput.text floatValue];
-        float t = [self.tInput.text floatValue];
-        float b = [self.bInput.text floatValue];
+        float m = [self.muInput.text floatValue] * pow(10, [self.muInputExponent.text floatValue]);
+        float z = [self.zInput.text floatValue] * pow(10, [self.zInputExponent.text floatValue]);
+        float t = [self.tInput.text floatValue] * pow(10, [self.tInputExponent.text floatValue]);
+        float b = [self.bInput.text floatValue] * pow(10, [self.bInputExponent.text floatValue]);
         NSLog(@"number: %g, %g, %g, %g", m, z, t, b);
         
         //do calculations
