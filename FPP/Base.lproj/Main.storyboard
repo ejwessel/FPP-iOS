@@ -3516,10 +3516,10 @@
             </objects>
             <point key="canvasLocation" x="2031" y="658"/>
         </scene>
-        <!--Alfen Velocity Light Controller-->
+        <!--Alfven Velocity Light Controller-->
         <scene sceneID="WSn-GN-Uv8">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="Gyj-1x-NwN" customClass="AlfenVelocityLightController" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="Gyj-1x-NwN" customClass="AlfvenVelocityLightController" sceneMemberID="viewController">
                     <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" id="gwl-b5-yrK">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>

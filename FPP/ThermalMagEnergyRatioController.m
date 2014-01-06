@@ -35,7 +35,7 @@
     [super viewDidLoad];
     
 	// Do any additional setup after loading the view.
-    self.title = @"Thermal Mag. Energy Ratio";
+    self.title = @"Thermal/Mag. Energy Ratio";
     
     self.VALUE_CONST = 4.03 * pow(10, -11);
     

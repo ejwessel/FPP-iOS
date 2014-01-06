@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AlfenVelocityLightController : UIViewController
+@interface AlfvenVelocityLightController : UIViewController
 @property (strong, nonatomic) IBOutlet UILabel *outputAnswer;
 @property (strong, nonatomic) IBOutlet UITextField *muInput;
 @property (strong, nonatomic) IBOutlet UITextField *nInput;

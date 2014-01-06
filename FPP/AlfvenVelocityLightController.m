@@ -6,13 +6,13 @@
 //  Copyright (c) 2013 test. All rights reserved.
 //
 
-#import "AlfenVelocityLightController.h"
+#import "AlfvenVelocityLightController.h"
 
-@interface AlfenVelocityLightController ()
+@interface AlfvenVelocityLightController ()
 
 @end
 
-@implementation AlfenVelocityLightController
+@implementation AlfvenVelocityLightController
 @synthesize muInput;
 @synthesize nInput;
 @synthesize bInput;
@@ -34,7 +34,7 @@
     [super viewDidLoad];
     
 	// Do any additional setup after loading the view.
-    self.title = @"Alfen Velocity(c)";
+    self.title = @"Alfven Velocity(c)";
     
     self.VALUE_CONST = 7.28;
     
