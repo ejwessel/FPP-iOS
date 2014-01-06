@@ -30,7 +30,7 @@
     [super viewDidLoad];
     
 	// Do any additional setup after loading the view.
-    self.title = @"Electron Intertial Length";
+    self.title = @"Electron Inertial Length";
     
     self.CONST_VALUE = 5.31 * pow(10, 5);
     

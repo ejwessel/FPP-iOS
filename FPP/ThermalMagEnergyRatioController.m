@@ -21,6 +21,7 @@
 @synthesize nInputExponent;
 @synthesize tInputExponent;
 @synthesize bInputExponent;
+@synthesize outputLabel;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -62,6 +63,8 @@
     self.bInputExponent.text = @"0";
     self.bInputExponent.keyboardType = UIKeyboardTypeDecimalPad;
     self.bInputExponent.clearButtonMode = true;
+    
+    self.outputLabel.text = @"\u03B2 =";
     
     self.outputAnswer.text = @"0";
     self.outputAnswer.layer.borderWidth = 1.0;

@@ -16,6 +16,7 @@
 @property (strong, nonatomic) IBOutlet UITextField *nInputExponent;
 @property (strong, nonatomic) IBOutlet UITextField *tInputExponent;
 @property (strong, nonatomic) IBOutlet UITextField *bInputExponent;
+@property (strong, nonatomic) IBOutlet UILabel *outputLabel;
 
 @property const float VALUE_CONST;
 

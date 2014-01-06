@@ -152,6 +152,9 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <segue destination="Lxh-5y-nkQ" kind="push" id="hWT-tG-pUB"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -161,13 +164,15 @@
                             <outlet property="delegate" destination="pGg-6v-bdr" id="Y6K-Cp-Qkv"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Options List" id="tQt-TN-PWz"/>
+                    <navigationItem key="navigationItem" title="Options List" id="tQt-TN-PWz">
+                        <barButtonItem key="backBarButtonItem" title=" " id="25K-Vf-A7X"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Cn-md-YlS" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="459" y="64"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Table View Controller - Lengths-->
         <scene sceneID="apW-7q-xBS">
             <objects>
                 <tableViewController id="TYi-dB-wb8" sceneMemberID="viewController">
@@ -333,13 +338,15 @@
                             <outlet property="delegate" destination="TYi-dB-wb8" id="CUX-b8-5G9"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="IDc-Im-rAh"/>
+                    <navigationItem key="navigationItem" title="Lengths" id="IDc-Im-rAh">
+                        <barButtonItem key="backBarButtonItem" title=" " id="tDA-dX-qy7"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jDx-xo-KWK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1101" y="-709"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Table View Controller - Frequencies-->
         <scene sceneID="2Ck-kS-nGp">
             <objects>
                 <tableViewController id="cLJ-eA-4iL" sceneMemberID="viewController">
@@ -526,7 +533,9 @@
                             <outlet property="delegate" destination="cLJ-eA-4iL" id="lQr-U3-RVW"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="uUM-Im-tLc"/>
+                    <navigationItem key="navigationItem" title="Frequencies" id="uUM-Im-tLc">
+                        <barButtonItem key="backBarButtonItem" title=" " id="cYa-76-uh1"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o75-hn-Gqt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2470,7 +2479,7 @@
             </objects>
             <point key="canvasLocation" x="1645" y="-1528"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Table View Controller - Velocities-->
         <scene sceneID="FqF-Pp-OGt">
             <objects>
                 <tableViewController id="pRN-Cn-4oW" sceneMemberID="viewController">
@@ -2573,13 +2582,15 @@
                             <outlet property="delegate" destination="pRN-Cn-4oW" id="IZ0-AF-4Ov"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Bgu-xz-N3K"/>
+                    <navigationItem key="navigationItem" title="Velocities" id="Bgu-xz-N3K">
+                        <barButtonItem key="backBarButtonItem" title=" " id="0wX-Jn-TvR"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0SR-8K-a9q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1101" y="-9"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Table View Controller - Dimensionless-->
         <scene sceneID="bsO-lX-Puq">
             <objects>
                 <tableViewController id="t7A-Z1-Vvc" sceneMemberID="viewController">
@@ -2639,7 +2650,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Alfven Velocity(c)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Tmp-lU-bki">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Alfven Velocity/Spd. of Light" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Tmp-lU-bki">
                                                     <rect key="frame" x="15" y="0.0" width="270" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
@@ -2745,13 +2756,53 @@
                             <outlet property="delegate" destination="t7A-Z1-Vvc" id="Fj7-iC-GBC"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Y7T-lt-t9U"/>
+                    <navigationItem key="navigationItem" title="Dimensionless" id="Y7T-lt-t9U">
+                        <barButtonItem key="backBarButtonItem" title=" " id="wiy-wG-no0"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AW2-bK-gut" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1101" y="658"/>
         </scene>
-        <!--Table View Controller-->
+        <!--View Controller - About-->
+        <scene sceneID="BNQ-wr-tqr">
+            <objects>
+                <viewController id="Lxh-5y-nkQ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Act-RH-lCn">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Disclaimer:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Cf8-7y-nVN">
+                                <rect key="frame" x="20" y="80" width="85" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Du5-Tu-Rdk">
+                                <rect key="frame" x="20" y="273" width="66" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="This app only features a subsection of the NRL Plasma Formula, the Fundamental Plasma Parameters." id="EZN-5Y-eFJ">
+                                <rect key="frame" x="20" y="103" width="280" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="About" id="SbH-c5-qvS">
+                        <barButtonItem key="backBarButtonItem" title=" " id="LFA-HD-U7I"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Il3-By-ESU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1101" y="1991"/>
+        </scene>
+        <!--Table View Controller - Miscellaneous-->
         <scene sceneID="zF1-3i-xEM">
             <objects>
                 <tableViewController id="sXw-9P-nd5" sceneMemberID="viewController">
@@ -2812,7 +2863,9 @@
                             <outlet property="delegate" destination="sXw-9P-nd5" id="MDz-UW-CsT"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="xOh-5J-8BI"/>
+                    <navigationItem key="navigationItem" title="Miscellaneous" id="xOh-5J-8BI">
+                        <barButtonItem key="backBarButtonItem" title=" " id="wSz-G4-WRn"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ymg-tg-IDs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -3372,7 +3425,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="v =" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LWk-gZ-yNw">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="=" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LWk-gZ-yNw">
                                         <rect key="frame" x="20" y="115" width="30" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -3481,7 +3534,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="v =" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="koz-1g-3Nr">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="=" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="koz-1g-3Nr">
                                         <rect key="frame" x="20" y="118" width="30" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -3617,7 +3670,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="v =" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LZT-Fj-7w8">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="=" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LZT-Fj-7w8">
                                         <rect key="frame" x="20" y="121" width="30" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -3726,7 +3779,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="v =" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ueo-Rl-AI9">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="=" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ueo-Rl-AI9">
                                         <rect key="frame" x="20" y="118" width="30" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -3862,7 +3915,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="v =" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="htH-9Y-m9I">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="b =" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="htH-9Y-m9I">
                                         <rect key="frame" x="20" y="112" width="30" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -3973,6 +4026,7 @@
                         <outlet property="nInput" destination="14U-qP-N4B" id="qG6-qT-bIZ"/>
                         <outlet property="nInputExponent" destination="pJ0-GN-75z" id="Glc-lB-F8z"/>
                         <outlet property="outputAnswer" destination="Tnt-Hh-vLh" id="BkH-n9-ZMw"/>
+                        <outlet property="outputLabel" destination="htH-9Y-m9I" id="LJN-hb-wNJ"/>
                         <outlet property="tInput" destination="maZ-G6-Q6k" id="haJ-XH-SdG"/>
                         <outlet property="tInputExponent" destination="5hM-8h-s2N" id="OZJ-pm-47Y"/>
                     </connections>
@@ -3999,7 +4053,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="v =" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7GS-B4-FyX">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="=" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7GS-B4-FyX">
                                         <rect key="frame" x="20" y="117" width="30" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -4205,6 +4259,10 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cm2sec.png" id="lVI-tD-EA9">
+                                        <rect key="frame" x="247" y="141" width="53" height="26"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
@@ -4292,18 +4350,6 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="input" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="A5z-x9-FYe">
-                                        <rect key="frame" x="57" y="286" width="91" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="O =" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Lxv-F7-liR">
-                                        <rect key="frame" x="20" y="290" width="30" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="eV" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ye3-Tg-KTs">
                                         <rect key="frame" x="248" y="252" width="52" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -4346,18 +4392,10 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="input" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" id="C6t-nh-qK2">
-                                        <rect key="frame" x="163" y="286" width="76" height="30"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ohmcm.png" id="xBS-Zd-Gcj">
+                                        <rect key="frame" x="247" y="137" width="43" height="24"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="e" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hvN-GI-f2l">
-                                        <rect key="frame" x="149" y="295" width="12" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
@@ -4373,9 +4411,6 @@
                         <outlet property="lambaLabel" destination="jkj-aI-rsc" id="y23-xA-vZJ"/>
                         <outlet property="lambdaInputExponent" destination="poY-cC-nPe" id="OUV-9x-IlQ"/>
                         <outlet property="lamdaInput" destination="YGu-0E-9h1" id="f9s-0Z-T4T"/>
-                        <outlet property="omegaInput" destination="A5z-x9-FYe" id="THa-uX-h3s"/>
-                        <outlet property="omegaInputExponent" destination="C6t-nh-qK2" id="zKC-np-oXl"/>
-                        <outlet property="omegaLabel" destination="Lxv-F7-liR" id="duR-VP-kMg"/>
                         <outlet property="outputN" destination="bfp-IR-QM3" id="JDK-fm-ved"/>
                         <outlet property="tInput" destination="jwb-eP-qxX" id="4zk-QN-MKz"/>
                         <outlet property="tInputExponent" destination="79Z-1d-vCr" id="w0C-ra-Aqs"/>
@@ -4394,6 +4429,7 @@
         <image name="alfenVelocityLight.png" width="452" height="50"/>
         <image name="alfven.png" width="647" height="105"/>
         <image name="classicalDistance.png" width="476" height="46"/>
+        <image name="cm2sec.png" width="177" height="57"/>
         <image name="cm3.png" width="101" height="43"/>
         <image name="debyeLength.png" width="799" height="43"/>
         <image name="electroCollRate.png" width="604" height="49"/>
@@ -4421,6 +4457,7 @@
         <image name="ionTrapRate.png" width="717" height="100"/>
         <image name="magIonRestRatio.png" width="543" height="50"/>
         <image name="numberOfParticlesDebye.png" width="602" height="47"/>
+        <image name="ohmcm.png" width="111" height="50"/>
         <image name="thermalMagRatio.png" width="643" height="47"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
