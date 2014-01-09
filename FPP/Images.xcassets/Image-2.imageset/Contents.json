@@ -30,15 +30,15 @@
     },
     {
       "idiom" : "universal",
-      "filename" : "Icon-Small.png",
+      "filename" : "Icon-76@2x.png",
       "unassigned" : true,
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Icon-76@2x.png",
+      "filename" : "Icon-Small.png",
       "unassigned" : true,
-      "scale" : "2x"
+      "scale" : "1x"
     },
     {
       "idiom" : "universal",
