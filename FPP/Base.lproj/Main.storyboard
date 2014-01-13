@@ -4422,7 +4422,7 @@ All quantities are in Gaussian cgs units except temperature (T, Te, Ti) expresse
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="tJd-vi-gsZ">
                                         <rect key="frame" x="98" y="341" width="124" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Message">
+                                        <state key="normal" title="Feedback">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
