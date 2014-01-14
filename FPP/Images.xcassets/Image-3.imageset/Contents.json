@@ -30,6 +30,12 @@
     },
     {
       "idiom" : "universal",
+      "filename" : "Icon-60@2x.png",
+      "unassigned" : true,
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
       "filename" : "Icon-76@2x.png",
       "unassigned" : true,
       "scale" : "2x"
