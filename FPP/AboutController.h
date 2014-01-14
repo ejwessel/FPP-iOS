@@ -10,5 +10,5 @@
 
 @interface AboutController : UIViewController
 @property (strong, nonatomic) IBOutlet UIButton *messageButton;
-#define URLEMail @"mailto:fundamentalplasmaparams@gmail.com?subject=Feedback or Suggestions&body=content"
+#define URLEMail @"mailto:fundamentalplasmaparams@gmail.com?subject=Feedback or Suggestions"
 @end
