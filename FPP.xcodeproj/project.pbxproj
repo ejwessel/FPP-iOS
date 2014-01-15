@@ -7,6 +7,69 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		231ED8B9187A799C001EB12D /* alfenVelocityLight.png in Resources */ = {isa = PBXBuildFile; fileRef = 231ED85A187A799C001EB12D /* alfenVelocityLight.png */; };
+		231ED8BA187A799C001EB12D /* AlfvenVelocityLightController.m in Sources */ = {isa = PBXBuildFile; fileRef = 231ED85C187A799C001EB12D /* AlfvenVelocityLightController.m */; };
+		231ED8BB187A799C001EB12D /* alfven.png in Resources */ = {isa = PBXBuildFile; fileRef = 231ED85D187A799C001EB12D /* alfven.png */; };
+		231ED8BC187A799C001EB12D /* AlfvenVelocityController.m in Sources */ = {isa = PBXBuildFile; fileRef = 231ED85F187A799C001EB12D /* AlfvenVelocityController.m */; };
+		231ED8BD187A799C001EB12D /* BohmDiffusion.png in Resources */ = {isa = PBXBuildFile; fileRef = 231ED860187A799C001EB12D /* BohmDiffusion.png */; };
+		231ED8BE187A799C001EB12D /* BohmDiffusionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 231ED862187A799C001EB12D /* BohmDiffusionController.m */; };
+		231ED8BF187A799C001EB12D /* classicalDistance.png in Resources */ = {isa = PBXBuildFile; fileRef = 231ED863187A799C001EB12D /* classicalDistance.png */; };
+		231ED8C0187A799C001EB12D /* ClassicalDistanceMinimumApproachController.m in Sources */ = {isa = PBXBuildFile; fileRef = 231ED865187A799C001EB12D /* ClassicalDistanceMinimumApproachController.m */; };
+		231ED8C1187A799C001EB12D /* cm2sec.png in Resources */ = {isa = PBXBuildFile; fileRef = 231ED866187A799C001EB12D /* cm2sec.png */; };
+		231ED8C2187A799C001EB12D /* cm3.png in Resources */ = {isa = PBXBuildFile; fileRef = 231ED867187A799C001EB12D /* cm3.png */; };
+		231ED8C4187A799C001EB12D /* debyeLength.png in Resources */ = {isa = PBXBuildFile; fileRef = 231ED86A187A799C001EB12D /* debyeLength.png */; };
+		231ED8C5187A799C001EB12D /* DebyeLengthController.m in Sources */ = {isa = PBXBuildFile; fileRef = 231ED86C187A799C001EB12D /* DebyeLengthController.m */; };
+		231ED8C6187A799C001EB12D /* electroCollRate.png in Resources */ = {isa = PBXBuildFile; fileRef = 231ED86D187A799C001EB12D /* electroCollRate.png */; };
+		231ED8C7187A799C001EB12D /* electronBroglieLength.png in Resources */ = {isa = PBXBuildFile; fileRef = 231ED86E187A799C001EB12D /* electronBroglieLength.png */; };
+		231ED8C8187A799C001EB12D /* ElectronBroglieLengthController.m in Sources */ = {isa = PBXBuildFile; fileRef = 231ED870187A799C001EB12D /* ElectronBroglieLengthController.m */; };
+		231ED8C9187A799C001EB12D /* ElectronCollisionRateController.m in Sources */ = {isa = PBXBuildFile; fileRef = 231ED872187A799C001EB12D /* ElectronCollisionRateController.m */; };
+		231ED8CA187A799C001EB12D /* electronGyro-f.png in Resources */ = {isa = PBXBuildFile; fileRef = 231ED873187A799C001EB12D /* electronGyro-f.png */; };
+		231ED8CB187A799C001EB12D /* electronGyro-w.png in Resources */ = {isa = PBXBuildFile; fileRef = 231ED874187A799C001EB12D /* electronGyro-w.png */; };
+		231ED8CC187A799C001EB12D /* ElectronGyrofrequencyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 231ED876187A799C001EB12D /* ElectronGyrofrequencyController.m */; };
+		231ED8CD187A799C001EB12D /* electronGyroradius.png in Resources */ = {isa = PBXBuildFile; fileRef = 231ED877187A799C001EB12D /* electronGyroradius.png */; };
+		231ED8CE187A799C001EB12D /* ElectronGyroradiusController.m in Sources */ = {isa = PBXBuildFile; fileRef = 231ED879187A799C001EB12D /* ElectronGyroradiusController.m */; };
+		231ED8CF187A799C001EB12D /* electronInertial.png in Resources */ = {isa = PBXBuildFile; fileRef = 231ED87A187A799C001EB12D /* electronInertial.png */; };
+		231ED8D0187A799C001EB12D /* ElectronInertialLengthController.m in Sources */ = {isa = PBXBuildFile; fileRef = 231ED87C187A799C001EB12D /* ElectronInertialLengthController.m */; };
+		231ED8D1187A799C001EB12D /* electronPlas-f.png in Resources */ = {isa = PBXBuildFile; fileRef = 231ED87D187A799C001EB12D /* electronPlas-f.png */; };
+		231ED8D2187A799C001EB12D /* electronPlas-w.png in Resources */ = {isa = PBXBuildFile; fileRef = 231ED87E187A799C001EB12D /* electronPlas-w.png */; };
+		231ED8D3187A799C001EB12D /* ElectronPlasmaFrequencyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 231ED880187A799C001EB12D /* ElectronPlasmaFrequencyController.m */; };
+		231ED8D4187A799C001EB12D /* electronPlasmaGyroRatio.png in Resources */ = {isa = PBXBuildFile; fileRef = 231ED881187A799C001EB12D /* electronPlasmaGyroRatio.png */; };
+		231ED8D5187A799C001EB12D /* ElectronPlasmaGyroRatioController.m in Sources */ = {isa = PBXBuildFile; fileRef = 231ED883187A799C001EB12D /* ElectronPlasmaGyroRatioController.m */; };
+		231ED8D6187A799C001EB12D /* ElectronProtonMassController.m in Sources */ = {isa = PBXBuildFile; fileRef = 231ED885187A799C001EB12D /* ElectronProtonMassController.m */; };
+		231ED8D7187A799C001EB12D /* electronProtonMassRatio.png in Resources */ = {isa = PBXBuildFile; fileRef = 231ED886187A799C001EB12D /* electronProtonMassRatio.png */; };
+		231ED8D8187A799C001EB12D /* electronThermal.png in Resources */ = {isa = PBXBuildFile; fileRef = 231ED887187A799C001EB12D /* electronThermal.png */; };
+		231ED8D9187A799C001EB12D /* ElectronThermalVelocityController.m in Sources */ = {isa = PBXBuildFile; fileRef = 231ED889187A799C001EB12D /* ElectronThermalVelocityController.m */; };
+		231ED8DA187A799C001EB12D /* ElectronTrappingRateController.m in Sources */ = {isa = PBXBuildFile; fileRef = 231ED88B187A799C001EB12D /* ElectronTrappingRateController.m */; };
+		231ED8DB187A799C001EB12D /* electronTrapRate.png in Resources */ = {isa = PBXBuildFile; fileRef = 231ED88C187A799C001EB12D /* electronTrapRate.png */; };
+		231ED8DC187A799C001EB12D /* IonCollisionRateController.m in Sources */ = {isa = PBXBuildFile; fileRef = 231ED88E187A799C001EB12D /* IonCollisionRateController.m */; };
+		231ED8DD187A799C001EB12D /* ionCollRate.png in Resources */ = {isa = PBXBuildFile; fileRef = 231ED88F187A799C001EB12D /* ionCollRate.png */; };
+		231ED8DE187A799C001EB12D /* ionGyro-f.png in Resources */ = {isa = PBXBuildFile; fileRef = 231ED890187A799C001EB12D /* ionGyro-f.png */; };
+		231ED8DF187A799C001EB12D /* ionGyro-w.png in Resources */ = {isa = PBXBuildFile; fileRef = 231ED891187A799C001EB12D /* ionGyro-w.png */; };
+		231ED8E0187A799C001EB12D /* IonGyrofrequencyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 231ED893187A799C001EB12D /* IonGyrofrequencyController.m */; };
+		231ED8E1187A799C001EB12D /* ionGyroradius.png in Resources */ = {isa = PBXBuildFile; fileRef = 231ED894187A799C001EB12D /* ionGyroradius.png */; };
+		231ED8E2187A799C001EB12D /* IonGyroradiusController.m in Sources */ = {isa = PBXBuildFile; fileRef = 231ED896187A799C001EB12D /* IonGyroradiusController.m */; };
+		231ED8E3187A799C001EB12D /* ionInertial.png in Resources */ = {isa = PBXBuildFile; fileRef = 231ED897187A799C001EB12D /* ionInertial.png */; };
+		231ED8E4187A799C001EB12D /* IonInertialLengthController.m in Sources */ = {isa = PBXBuildFile; fileRef = 231ED899187A799C001EB12D /* IonInertialLengthController.m */; };
+		231ED8E5187A799C001EB12D /* ionPlas-f.png in Resources */ = {isa = PBXBuildFile; fileRef = 231ED89A187A799C001EB12D /* ionPlas-f.png */; };
+		231ED8E6187A799C001EB12D /* ionPlas-w.png in Resources */ = {isa = PBXBuildFile; fileRef = 231ED89B187A799C001EB12D /* ionPlas-w.png */; };
+		231ED8E7187A799C001EB12D /* IonPlasGyroRatioController.m in Sources */ = {isa = PBXBuildFile; fileRef = 231ED89D187A799C001EB12D /* IonPlasGyroRatioController.m */; };
+		231ED8E8187A799C001EB12D /* IonPlasmaFrequencyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 231ED89F187A799C001EB12D /* IonPlasmaFrequencyController.m */; };
+		231ED8E9187A799C001EB12D /* ionPlasmaGyroRatio.png in Resources */ = {isa = PBXBuildFile; fileRef = 231ED8A0187A799C001EB12D /* ionPlasmaGyroRatio.png */; };
+		231ED8EA187A799C001EB12D /* ionSound.png in Resources */ = {isa = PBXBuildFile; fileRef = 231ED8A1187A799C001EB12D /* ionSound.png */; };
+		231ED8EB187A799C001EB12D /* IonSoundVelocityController.m in Sources */ = {isa = PBXBuildFile; fileRef = 231ED8A3187A799C001EB12D /* IonSoundVelocityController.m */; };
+		231ED8EC187A799C001EB12D /* ionThermal.png in Resources */ = {isa = PBXBuildFile; fileRef = 231ED8A4187A799C001EB12D /* ionThermal.png */; };
+		231ED8ED187A799C001EB12D /* IonThermalVelocityController.m in Sources */ = {isa = PBXBuildFile; fileRef = 231ED8A6187A799C001EB12D /* IonThermalVelocityController.m */; };
+		231ED8EE187A799C001EB12D /* IonTrappingRateController.m in Sources */ = {isa = PBXBuildFile; fileRef = 231ED8A8187A799C001EB12D /* IonTrappingRateController.m */; };
+		231ED8EF187A799C001EB12D /* ionTrapRate.png in Resources */ = {isa = PBXBuildFile; fileRef = 231ED8A9187A799C001EB12D /* ionTrapRate.png */; };
+		231ED8F0187A799C001EB12D /* MagIonRestEnergyRatioController.m in Sources */ = {isa = PBXBuildFile; fileRef = 231ED8AB187A799C001EB12D /* MagIonRestEnergyRatioController.m */; };
+		231ED8F1187A799C001EB12D /* magIonRestRatio.png in Resources */ = {isa = PBXBuildFile; fileRef = 231ED8AC187A799C001EB12D /* magIonRestRatio.png */; };
+		231ED8F2187A799C001EB12D /* numberOfParticlesDebye.png in Resources */ = {isa = PBXBuildFile; fileRef = 231ED8AD187A799C001EB12D /* numberOfParticlesDebye.png */; };
+		231ED8F3187A799C001EB12D /* NumberOfParticlesDebyeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 231ED8AF187A799C001EB12D /* NumberOfParticlesDebyeController.m */; };
+		231ED8F4187A799C001EB12D /* ohmcm.png in Resources */ = {isa = PBXBuildFile; fileRef = 231ED8B0187A799C001EB12D /* ohmcm.png */; };
+		231ED8F6187A799C001EB12D /* ThermalMagEnergyRatioController.m in Sources */ = {isa = PBXBuildFile; fileRef = 231ED8B4187A799C001EB12D /* ThermalMagEnergyRatioController.m */; };
+		231ED8F7187A799C001EB12D /* thermalMagRatio.png in Resources */ = {isa = PBXBuildFile; fileRef = 231ED8B5187A799C001EB12D /* thermalMagRatio.png */; };
+		231ED8F8187A799C001EB12D /* TransverseSpitzer.png in Resources */ = {isa = PBXBuildFile; fileRef = 231ED8B6187A799C001EB12D /* TransverseSpitzer.png */; };
+		231ED8F9187A799C001EB12D /* TransverseSpitzerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 231ED8B8187A799C001EB12D /* TransverseSpitzerController.m */; };
 		23883D5C18692742002E50BA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23883D5B18692742002E50BA /* Foundation.framework */; };
 		23883D5E18692742002E50BA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23883D5D18692742002E50BA /* CoreGraphics.framework */; };
 		23883D6018692742002E50BA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23883D5F18692742002E50BA /* UIKit.framework */; };
@@ -14,14 +77,14 @@
 		23883D6818692742002E50BA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 23883D6718692742002E50BA /* main.m */; };
 		23883D6C18692742002E50BA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 23883D6B18692742002E50BA /* AppDelegate.m */; };
 		23883D6F18692742002E50BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23883D6D18692742002E50BA /* Main.storyboard */; };
-		23883D7218692742002E50BA /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23883D7118692742002E50BA /* MasterViewController.m */; };
-		23883D7518692742002E50BA /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23883D7418692742002E50BA /* DetailViewController.m */; };
 		23883D7718692742002E50BA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23883D7618692742002E50BA /* Images.xcassets */; };
 		23883D7E18692742002E50BA /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23883D7D18692742002E50BA /* XCTest.framework */; };
 		23883D7F18692742002E50BA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23883D5B18692742002E50BA /* Foundation.framework */; };
 		23883D8018692742002E50BA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23883D5F18692742002E50BA /* UIKit.framework */; };
 		23883D8818692742002E50BA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 23883D8618692742002E50BA /* InfoPlist.strings */; };
 		23883D8A18692742002E50BA /* FPPTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 23883D8918692742002E50BA /* FPPTests.m */; };
+		23AC5F5D187E5CEE00E61098 /* AboutController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23AC5F5C187E5CEE00E61098 /* AboutController.m */; };
+		23DA4ED2187A910D00FA759E /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23DA4ED1187A910D00FA759E /* TableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +98,97 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		231ED85A187A799C001EB12D /* alfenVelocityLight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alfenVelocityLight.png; sourceTree = "<group>"; };
+		231ED85B187A799C001EB12D /* AlfvenVelocityLightController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlfvenVelocityLightController.h; sourceTree = "<group>"; };
+		231ED85C187A799C001EB12D /* AlfvenVelocityLightController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlfvenVelocityLightController.m; sourceTree = "<group>"; };
+		231ED85D187A799C001EB12D /* alfven.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alfven.png; sourceTree = "<group>"; };
+		231ED85E187A799C001EB12D /* AlfvenVelocityController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlfvenVelocityController.h; sourceTree = "<group>"; };
+		231ED85F187A799C001EB12D /* AlfvenVelocityController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlfvenVelocityController.m; sourceTree = "<group>"; };
+		231ED860187A799C001EB12D /* BohmDiffusion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BohmDiffusion.png; sourceTree = "<group>"; };
+		231ED861187A799C001EB12D /* BohmDiffusionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BohmDiffusionController.h; sourceTree = "<group>"; };
+		231ED862187A799C001EB12D /* BohmDiffusionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BohmDiffusionController.m; sourceTree = "<group>"; };
+		231ED863187A799C001EB12D /* classicalDistance.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = classicalDistance.png; sourceTree = "<group>"; };
+		231ED864187A799C001EB12D /* ClassicalDistanceMinimumApproachController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassicalDistanceMinimumApproachController.h; sourceTree = "<group>"; };
+		231ED865187A799C001EB12D /* ClassicalDistanceMinimumApproachController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassicalDistanceMinimumApproachController.m; sourceTree = "<group>"; };
+		231ED866187A799C001EB12D /* cm2sec.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cm2sec.png; sourceTree = "<group>"; };
+		231ED867187A799C001EB12D /* cm3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cm3.png; sourceTree = "<group>"; };
+		231ED86A187A799C001EB12D /* debyeLength.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = debyeLength.png; sourceTree = "<group>"; };
+		231ED86B187A799C001EB12D /* DebyeLengthController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebyeLengthController.h; sourceTree = "<group>"; };
+		231ED86C187A799C001EB12D /* DebyeLengthController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebyeLengthController.m; sourceTree = "<group>"; };
+		231ED86D187A799C001EB12D /* electroCollRate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = electroCollRate.png; sourceTree = "<group>"; };
+		231ED86E187A799C001EB12D /* electronBroglieLength.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = electronBroglieLength.png; sourceTree = "<group>"; };
+		231ED86F187A799C001EB12D /* ElectronBroglieLengthController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ElectronBroglieLengthController.h; sourceTree = "<group>"; };
+		231ED870187A799C001EB12D /* ElectronBroglieLengthController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ElectronBroglieLengthController.m; sourceTree = "<group>"; };
+		231ED871187A799C001EB12D /* ElectronCollisionRateController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ElectronCollisionRateController.h; sourceTree = "<group>"; };
+		231ED872187A799C001EB12D /* ElectronCollisionRateController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ElectronCollisionRateController.m; sourceTree = "<group>"; };
+		231ED873187A799C001EB12D /* electronGyro-f.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "electronGyro-f.png"; sourceTree = "<group>"; };
+		231ED874187A799C001EB12D /* electronGyro-w.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "electronGyro-w.png"; sourceTree = "<group>"; };
+		231ED875187A799C001EB12D /* ElectronGyrofrequencyController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ElectronGyrofrequencyController.h; sourceTree = "<group>"; };
+		231ED876187A799C001EB12D /* ElectronGyrofrequencyController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ElectronGyrofrequencyController.m; sourceTree = "<group>"; };
+		231ED877187A799C001EB12D /* electronGyroradius.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = electronGyroradius.png; sourceTree = "<group>"; };
+		231ED878187A799C001EB12D /* ElectronGyroradiusController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ElectronGyroradiusController.h; sourceTree = "<group>"; };
+		231ED879187A799C001EB12D /* ElectronGyroradiusController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ElectronGyroradiusController.m; sourceTree = "<group>"; };
+		231ED87A187A799C001EB12D /* electronInertial.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = electronInertial.png; sourceTree = "<group>"; };
+		231ED87B187A799C001EB12D /* ElectronInertialLengthController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ElectronInertialLengthController.h; sourceTree = "<group>"; };
+		231ED87C187A799C001EB12D /* ElectronInertialLengthController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ElectronInertialLengthController.m; sourceTree = "<group>"; };
+		231ED87D187A799C001EB12D /* electronPlas-f.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "electronPlas-f.png"; sourceTree = "<group>"; };
+		231ED87E187A799C001EB12D /* electronPlas-w.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "electronPlas-w.png"; sourceTree = "<group>"; };
+		231ED87F187A799C001EB12D /* ElectronPlasmaFrequencyController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ElectronPlasmaFrequencyController.h; sourceTree = "<group>"; };
+		231ED880187A799C001EB12D /* ElectronPlasmaFrequencyController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ElectronPlasmaFrequencyController.m; sourceTree = "<group>"; };
+		231ED881187A799C001EB12D /* electronPlasmaGyroRatio.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = electronPlasmaGyroRatio.png; sourceTree = "<group>"; };
+		231ED882187A799C001EB12D /* ElectronPlasmaGyroRatioController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ElectronPlasmaGyroRatioController.h; sourceTree = "<group>"; };
+		231ED883187A799C001EB12D /* ElectronPlasmaGyroRatioController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ElectronPlasmaGyroRatioController.m; sourceTree = "<group>"; };
+		231ED884187A799C001EB12D /* ElectronProtonMassController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ElectronProtonMassController.h; sourceTree = "<group>"; };
+		231ED885187A799C001EB12D /* ElectronProtonMassController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ElectronProtonMassController.m; sourceTree = "<group>"; };
+		231ED886187A799C001EB12D /* electronProtonMassRatio.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = electronProtonMassRatio.png; sourceTree = "<group>"; };
+		231ED887187A799C001EB12D /* electronThermal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = electronThermal.png; sourceTree = "<group>"; };
+		231ED888187A799C001EB12D /* ElectronThermalVelocityController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ElectronThermalVelocityController.h; sourceTree = "<group>"; };
+		231ED889187A799C001EB12D /* ElectronThermalVelocityController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ElectronThermalVelocityController.m; sourceTree = "<group>"; };
+		231ED88A187A799C001EB12D /* ElectronTrappingRateController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ElectronTrappingRateController.h; sourceTree = "<group>"; };
+		231ED88B187A799C001EB12D /* ElectronTrappingRateController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ElectronTrappingRateController.m; sourceTree = "<group>"; };
+		231ED88C187A799C001EB12D /* electronTrapRate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = electronTrapRate.png; sourceTree = "<group>"; };
+		231ED88D187A799C001EB12D /* IonCollisionRateController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IonCollisionRateController.h; sourceTree = "<group>"; };
+		231ED88E187A799C001EB12D /* IonCollisionRateController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IonCollisionRateController.m; sourceTree = "<group>"; };
+		231ED88F187A799C001EB12D /* ionCollRate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ionCollRate.png; sourceTree = "<group>"; };
+		231ED890187A799C001EB12D /* ionGyro-f.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ionGyro-f.png"; sourceTree = "<group>"; };
+		231ED891187A799C001EB12D /* ionGyro-w.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ionGyro-w.png"; sourceTree = "<group>"; };
+		231ED892187A799C001EB12D /* IonGyrofrequencyController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IonGyrofrequencyController.h; sourceTree = "<group>"; };
+		231ED893187A799C001EB12D /* IonGyrofrequencyController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IonGyrofrequencyController.m; sourceTree = "<group>"; };
+		231ED894187A799C001EB12D /* ionGyroradius.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ionGyroradius.png; sourceTree = "<group>"; };
+		231ED895187A799C001EB12D /* IonGyroradiusController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IonGyroradiusController.h; sourceTree = "<group>"; };
+		231ED896187A799C001EB12D /* IonGyroradiusController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IonGyroradiusController.m; sourceTree = "<group>"; };
+		231ED897187A799C001EB12D /* ionInertial.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ionInertial.png; sourceTree = "<group>"; };
+		231ED898187A799C001EB12D /* IonInertialLengthController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IonInertialLengthController.h; sourceTree = "<group>"; };
+		231ED899187A799C001EB12D /* IonInertialLengthController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IonInertialLengthController.m; sourceTree = "<group>"; };
+		231ED89A187A799C001EB12D /* ionPlas-f.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ionPlas-f.png"; sourceTree = "<group>"; };
+		231ED89B187A799C001EB12D /* ionPlas-w.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ionPlas-w.png"; sourceTree = "<group>"; };
+		231ED89C187A799C001EB12D /* IonPlasGyroRatioController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IonPlasGyroRatioController.h; sourceTree = "<group>"; };
+		231ED89D187A799C001EB12D /* IonPlasGyroRatioController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IonPlasGyroRatioController.m; sourceTree = "<group>"; };
+		231ED89E187A799C001EB12D /* IonPlasmaFrequencyController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IonPlasmaFrequencyController.h; sourceTree = "<group>"; };
+		231ED89F187A799C001EB12D /* IonPlasmaFrequencyController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IonPlasmaFrequencyController.m; sourceTree = "<group>"; };
+		231ED8A0187A799C001EB12D /* ionPlasmaGyroRatio.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ionPlasmaGyroRatio.png; sourceTree = "<group>"; };
+		231ED8A1187A799C001EB12D /* ionSound.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ionSound.png; sourceTree = "<group>"; };
+		231ED8A2187A799C001EB12D /* IonSoundVelocityController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IonSoundVelocityController.h; sourceTree = "<group>"; };
+		231ED8A3187A799C001EB12D /* IonSoundVelocityController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IonSoundVelocityController.m; sourceTree = "<group>"; };
+		231ED8A4187A799C001EB12D /* ionThermal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ionThermal.png; sourceTree = "<group>"; };
+		231ED8A5187A799C001EB12D /* IonThermalVelocityController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IonThermalVelocityController.h; sourceTree = "<group>"; };
+		231ED8A6187A799C001EB12D /* IonThermalVelocityController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IonThermalVelocityController.m; sourceTree = "<group>"; };
+		231ED8A7187A799C001EB12D /* IonTrappingRateController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IonTrappingRateController.h; sourceTree = "<group>"; };
+		231ED8A8187A799C001EB12D /* IonTrappingRateController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IonTrappingRateController.m; sourceTree = "<group>"; };
+		231ED8A9187A799C001EB12D /* ionTrapRate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ionTrapRate.png; sourceTree = "<group>"; };
+		231ED8AA187A799C001EB12D /* MagIonRestEnergyRatioController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagIonRestEnergyRatioController.h; sourceTree = "<group>"; };
+		231ED8AB187A799C001EB12D /* MagIonRestEnergyRatioController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagIonRestEnergyRatioController.m; sourceTree = "<group>"; };
+		231ED8AC187A799C001EB12D /* magIonRestRatio.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = magIonRestRatio.png; sourceTree = "<group>"; };
+		231ED8AD187A799C001EB12D /* numberOfParticlesDebye.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = numberOfParticlesDebye.png; sourceTree = "<group>"; };
+		231ED8AE187A799C001EB12D /* NumberOfParticlesDebyeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberOfParticlesDebyeController.h; sourceTree = "<group>"; };
+		231ED8AF187A799C001EB12D /* NumberOfParticlesDebyeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberOfParticlesDebyeController.m; sourceTree = "<group>"; };
+		231ED8B0187A799C001EB12D /* ohmcm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ohmcm.png; sourceTree = "<group>"; };
+		231ED8B3187A799C001EB12D /* ThermalMagEnergyRatioController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThermalMagEnergyRatioController.h; sourceTree = "<group>"; };
+		231ED8B4187A799C001EB12D /* ThermalMagEnergyRatioController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThermalMagEnergyRatioController.m; sourceTree = "<group>"; };
+		231ED8B5187A799C001EB12D /* thermalMagRatio.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thermalMagRatio.png; sourceTree = "<group>"; };
+		231ED8B6187A799C001EB12D /* TransverseSpitzer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TransverseSpitzer.png; sourceTree = "<group>"; };
+		231ED8B7187A799C001EB12D /* TransverseSpitzerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransverseSpitzerController.h; sourceTree = "<group>"; };
+		231ED8B8187A799C001EB12D /* TransverseSpitzerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransverseSpitzerController.m; sourceTree = "<group>"; };
 		23883D5818692742002E50BA /* FPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23883D5B18692742002E50BA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		23883D5D18692742002E50BA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -46,16 +200,16 @@
 		23883D6A18692742002E50BA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		23883D6B18692742002E50BA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		23883D6E18692742002E50BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		23883D7018692742002E50BA /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
-		23883D7118692742002E50BA /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
-		23883D7318692742002E50BA /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		23883D7418692742002E50BA /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		23883D7618692742002E50BA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		23883D7C18692742002E50BA /* FPPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FPPTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		23883D7D18692742002E50BA /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		23883D8518692742002E50BA /* FPPTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FPPTests-Info.plist"; sourceTree = "<group>"; };
 		23883D8718692742002E50BA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		23883D8918692742002E50BA /* FPPTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FPPTests.m; sourceTree = "<group>"; };
+		23AC5F5B187E5CEE00E61098 /* AboutController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutController.h; sourceTree = "<group>"; };
+		23AC5F5C187E5CEE00E61098 /* AboutController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutController.m; sourceTree = "<group>"; };
+		23DA4ED0187A910D00FA759E /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		23DA4ED1187A910D00FA759E /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,13 +269,19 @@
 		23883D6118692742002E50BA /* FPP */ = {
 			isa = PBXGroup;
 			children = (
+				23883D6D18692742002E50BA /* Main.storyboard */,
 				23883D6A18692742002E50BA /* AppDelegate.h */,
 				23883D6B18692742002E50BA /* AppDelegate.m */,
-				23883D6D18692742002E50BA /* Main.storyboard */,
-				23883D7018692742002E50BA /* MasterViewController.h */,
-				23883D7118692742002E50BA /* MasterViewController.m */,
-				23883D7318692742002E50BA /* DetailViewController.h */,
-				23883D7418692742002E50BA /* DetailViewController.m */,
+				23DA4ED0187A910D00FA759E /* TableViewController.h */,
+				23DA4ED1187A910D00FA759E /* TableViewController.m */,
+				23AC5F5B187E5CEE00E61098 /* AboutController.h */,
+				23AC5F5C187E5CEE00E61098 /* AboutController.m */,
+				23DA4EC8187A7DFF00FA759E /* Frequencies */,
+				23DA4EC9187A7E2F00FA759E /* Lengths */,
+				23DA4ECA187A7E3B00FA759E /* Velocities */,
+				23DA4ECB187A7E4000FA759E /* Dimensionless */,
+				23DA4ECC187A7E4500FA759E /* Miscellaneous */,
+				23DA4EC7187A7C9200FA759E /* Images */,
 				23883D7618692742002E50BA /* Images.xcassets */,
 				23883D6218692742002E50BA /* Supporting Files */,
 			);
@@ -155,6 +315,139 @@
 				23883D8618692742002E50BA /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		23DA4EC7187A7C9200FA759E /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				231ED86E187A799C001EB12D /* electronBroglieLength.png */,
+				231ED85A187A799C001EB12D /* alfenVelocityLight.png */,
+				231ED85D187A799C001EB12D /* alfven.png */,
+				231ED860187A799C001EB12D /* BohmDiffusion.png */,
+				231ED863187A799C001EB12D /* classicalDistance.png */,
+				231ED866187A799C001EB12D /* cm2sec.png */,
+				231ED867187A799C001EB12D /* cm3.png */,
+				231ED86A187A799C001EB12D /* debyeLength.png */,
+				231ED86D187A799C001EB12D /* electroCollRate.png */,
+				231ED873187A799C001EB12D /* electronGyro-f.png */,
+				231ED874187A799C001EB12D /* electronGyro-w.png */,
+				231ED877187A799C001EB12D /* electronGyroradius.png */,
+				231ED87A187A799C001EB12D /* electronInertial.png */,
+				231ED87D187A799C001EB12D /* electronPlas-f.png */,
+				231ED87E187A799C001EB12D /* electronPlas-w.png */,
+				231ED881187A799C001EB12D /* electronPlasmaGyroRatio.png */,
+				231ED886187A799C001EB12D /* electronProtonMassRatio.png */,
+				231ED887187A799C001EB12D /* electronThermal.png */,
+				231ED88C187A799C001EB12D /* electronTrapRate.png */,
+				231ED88F187A799C001EB12D /* ionCollRate.png */,
+				231ED890187A799C001EB12D /* ionGyro-f.png */,
+				231ED891187A799C001EB12D /* ionGyro-w.png */,
+				231ED894187A799C001EB12D /* ionGyroradius.png */,
+				231ED897187A799C001EB12D /* ionInertial.png */,
+				231ED89A187A799C001EB12D /* ionPlas-f.png */,
+				231ED89B187A799C001EB12D /* ionPlas-w.png */,
+				231ED8A0187A799C001EB12D /* ionPlasmaGyroRatio.png */,
+				231ED8A1187A799C001EB12D /* ionSound.png */,
+				231ED8A4187A799C001EB12D /* ionThermal.png */,
+				231ED8A9187A799C001EB12D /* ionTrapRate.png */,
+				231ED8AC187A799C001EB12D /* magIonRestRatio.png */,
+				231ED8AD187A799C001EB12D /* numberOfParticlesDebye.png */,
+				231ED8B0187A799C001EB12D /* ohmcm.png */,
+				231ED8B5187A799C001EB12D /* thermalMagRatio.png */,
+				231ED8B6187A799C001EB12D /* TransverseSpitzer.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		23DA4EC8187A7DFF00FA759E /* Frequencies */ = {
+			isa = PBXGroup;
+			children = (
+				231ED875187A799C001EB12D /* ElectronGyrofrequencyController.h */,
+				231ED876187A799C001EB12D /* ElectronGyrofrequencyController.m */,
+				231ED892187A799C001EB12D /* IonGyrofrequencyController.h */,
+				231ED893187A799C001EB12D /* IonGyrofrequencyController.m */,
+				231ED87F187A799C001EB12D /* ElectronPlasmaFrequencyController.h */,
+				231ED880187A799C001EB12D /* ElectronPlasmaFrequencyController.m */,
+				231ED89E187A799C001EB12D /* IonPlasmaFrequencyController.h */,
+				231ED89F187A799C001EB12D /* IonPlasmaFrequencyController.m */,
+				231ED88A187A799C001EB12D /* ElectronTrappingRateController.h */,
+				231ED88B187A799C001EB12D /* ElectronTrappingRateController.m */,
+				231ED8A7187A799C001EB12D /* IonTrappingRateController.h */,
+				231ED8A8187A799C001EB12D /* IonTrappingRateController.m */,
+				231ED871187A799C001EB12D /* ElectronCollisionRateController.h */,
+				231ED872187A799C001EB12D /* ElectronCollisionRateController.m */,
+				231ED88D187A799C001EB12D /* IonCollisionRateController.h */,
+				231ED88E187A799C001EB12D /* IonCollisionRateController.m */,
+			);
+			name = Frequencies;
+			sourceTree = "<group>";
+		};
+		23DA4EC9187A7E2F00FA759E /* Lengths */ = {
+			isa = PBXGroup;
+			children = (
+				231ED86F187A799C001EB12D /* ElectronBroglieLengthController.h */,
+				231ED870187A799C001EB12D /* ElectronBroglieLengthController.m */,
+				231ED864187A799C001EB12D /* ClassicalDistanceMinimumApproachController.h */,
+				231ED865187A799C001EB12D /* ClassicalDistanceMinimumApproachController.m */,
+				231ED878187A799C001EB12D /* ElectronGyroradiusController.h */,
+				231ED879187A799C001EB12D /* ElectronGyroradiusController.m */,
+				231ED895187A799C001EB12D /* IonGyroradiusController.h */,
+				231ED896187A799C001EB12D /* IonGyroradiusController.m */,
+				231ED87B187A799C001EB12D /* ElectronInertialLengthController.h */,
+				231ED87C187A799C001EB12D /* ElectronInertialLengthController.m */,
+				231ED898187A799C001EB12D /* IonInertialLengthController.h */,
+				231ED899187A799C001EB12D /* IonInertialLengthController.m */,
+				231ED86B187A799C001EB12D /* DebyeLengthController.h */,
+				231ED86C187A799C001EB12D /* DebyeLengthController.m */,
+			);
+			name = Lengths;
+			sourceTree = "<group>";
+		};
+		23DA4ECA187A7E3B00FA759E /* Velocities */ = {
+			isa = PBXGroup;
+			children = (
+				231ED888187A799C001EB12D /* ElectronThermalVelocityController.h */,
+				231ED889187A799C001EB12D /* ElectronThermalVelocityController.m */,
+				231ED8A5187A799C001EB12D /* IonThermalVelocityController.h */,
+				231ED8A6187A799C001EB12D /* IonThermalVelocityController.m */,
+				231ED8A2187A799C001EB12D /* IonSoundVelocityController.h */,
+				231ED8A3187A799C001EB12D /* IonSoundVelocityController.m */,
+				231ED85E187A799C001EB12D /* AlfvenVelocityController.h */,
+				231ED85F187A799C001EB12D /* AlfvenVelocityController.m */,
+			);
+			name = Velocities;
+			sourceTree = "<group>";
+		};
+		23DA4ECB187A7E4000FA759E /* Dimensionless */ = {
+			isa = PBXGroup;
+			children = (
+				231ED884187A799C001EB12D /* ElectronProtonMassController.h */,
+				231ED885187A799C001EB12D /* ElectronProtonMassController.m */,
+				231ED8AE187A799C001EB12D /* NumberOfParticlesDebyeController.h */,
+				231ED8AF187A799C001EB12D /* NumberOfParticlesDebyeController.m */,
+				231ED85B187A799C001EB12D /* AlfvenVelocityLightController.h */,
+				231ED85C187A799C001EB12D /* AlfvenVelocityLightController.m */,
+				231ED882187A799C001EB12D /* ElectronPlasmaGyroRatioController.h */,
+				231ED883187A799C001EB12D /* ElectronPlasmaGyroRatioController.m */,
+				231ED89C187A799C001EB12D /* IonPlasGyroRatioController.h */,
+				231ED89D187A799C001EB12D /* IonPlasGyroRatioController.m */,
+				231ED8B3187A799C001EB12D /* ThermalMagEnergyRatioController.h */,
+				231ED8B4187A799C001EB12D /* ThermalMagEnergyRatioController.m */,
+				231ED8AA187A799C001EB12D /* MagIonRestEnergyRatioController.h */,
+				231ED8AB187A799C001EB12D /* MagIonRestEnergyRatioController.m */,
+			);
+			name = Dimensionless;
+			sourceTree = "<group>";
+		};
+		23DA4ECC187A7E4500FA759E /* Miscellaneous */ = {
+			isa = PBXGroup;
+			children = (
+				231ED861187A799C001EB12D /* BohmDiffusionController.h */,
+				231ED862187A799C001EB12D /* BohmDiffusionController.m */,
+				231ED8B7187A799C001EB12D /* TransverseSpitzerController.h */,
+				231ED8B8187A799C001EB12D /* TransverseSpitzerController.m */,
+			);
+			name = Miscellaneous;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,6 +497,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = test;
 				TargetAttributes = {
+					23883D5718692742002E50BA = {
+						DevelopmentTeam = 5376U5Y3CW;
+					};
 					23883D7B18692742002E50BA = {
 						TestTargetID = 23883D5718692742002E50BA;
 					};
@@ -233,8 +529,43 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				231ED8CB187A799C001EB12D /* electronGyro-w.png in Resources */,
+				231ED8E9187A799C001EB12D /* ionPlasmaGyroRatio.png in Resources */,
+				231ED8D2187A799C001EB12D /* electronPlas-w.png in Resources */,
+				231ED8BB187A799C001EB12D /* alfven.png in Resources */,
+				231ED8E1187A799C001EB12D /* ionGyroradius.png in Resources */,
 				23883D7718692742002E50BA /* Images.xcassets in Resources */,
+				231ED8C1187A799C001EB12D /* cm2sec.png in Resources */,
+				231ED8EF187A799C001EB12D /* ionTrapRate.png in Resources */,
+				231ED8C2187A799C001EB12D /* cm3.png in Resources */,
+				231ED8D8187A799C001EB12D /* electronThermal.png in Resources */,
 				23883D6618692742002E50BA /* InfoPlist.strings in Resources */,
+				231ED8E5187A799C001EB12D /* ionPlas-f.png in Resources */,
+				231ED8D7187A799C001EB12D /* electronProtonMassRatio.png in Resources */,
+				231ED8D1187A799C001EB12D /* electronPlas-f.png in Resources */,
+				231ED8F8187A799C001EB12D /* TransverseSpitzer.png in Resources */,
+				231ED8DE187A799C001EB12D /* ionGyro-f.png in Resources */,
+				231ED8EA187A799C001EB12D /* ionSound.png in Resources */,
+				231ED8F4187A799C001EB12D /* ohmcm.png in Resources */,
+				231ED8F1187A799C001EB12D /* magIonRestRatio.png in Resources */,
+				231ED8BD187A799C001EB12D /* BohmDiffusion.png in Resources */,
+				231ED8E3187A799C001EB12D /* ionInertial.png in Resources */,
+				231ED8CD187A799C001EB12D /* electronGyroradius.png in Resources */,
+				231ED8DB187A799C001EB12D /* electronTrapRate.png in Resources */,
+				231ED8DF187A799C001EB12D /* ionGyro-w.png in Resources */,
+				231ED8EC187A799C001EB12D /* ionThermal.png in Resources */,
+				231ED8C7187A799C001EB12D /* electronBroglieLength.png in Resources */,
+				231ED8F2187A799C001EB12D /* numberOfParticlesDebye.png in Resources */,
+				231ED8B9187A799C001EB12D /* alfenVelocityLight.png in Resources */,
+				231ED8CA187A799C001EB12D /* electronGyro-f.png in Resources */,
+				231ED8E6187A799C001EB12D /* ionPlas-w.png in Resources */,
+				231ED8F7187A799C001EB12D /* thermalMagRatio.png in Resources */,
+				231ED8CF187A799C001EB12D /* electronInertial.png in Resources */,
+				231ED8D4187A799C001EB12D /* electronPlasmaGyroRatio.png in Resources */,
+				231ED8DD187A799C001EB12D /* ionCollRate.png in Resources */,
+				231ED8C6187A799C001EB12D /* electroCollRate.png in Resources */,
+				231ED8C4187A799C001EB12D /* debyeLength.png in Resources */,
+				231ED8BF187A799C001EB12D /* classicalDistance.png in Resources */,
 				23883D6F18692742002E50BA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,10 +585,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				231ED8D6187A799C001EB12D /* ElectronProtonMassController.m in Sources */,
+				231ED8F6187A799C001EB12D /* ThermalMagEnergyRatioController.m in Sources */,
 				23883D6C18692742002E50BA /* AppDelegate.m in Sources */,
-				23883D7218692742002E50BA /* MasterViewController.m in Sources */,
+				231ED8CC187A799C001EB12D /* ElectronGyrofrequencyController.m in Sources */,
+				231ED8ED187A799C001EB12D /* IonThermalVelocityController.m in Sources */,
 				23883D6818692742002E50BA /* main.m in Sources */,
-				23883D7518692742002E50BA /* DetailViewController.m in Sources */,
+				231ED8C8187A799C001EB12D /* ElectronBroglieLengthController.m in Sources */,
+				231ED8E4187A799C001EB12D /* IonInertialLengthController.m in Sources */,
+				231ED8DC187A799C001EB12D /* IonCollisionRateController.m in Sources */,
+				231ED8E8187A799C001EB12D /* IonPlasmaFrequencyController.m in Sources */,
+				231ED8E0187A799C001EB12D /* IonGyrofrequencyController.m in Sources */,
+				23AC5F5D187E5CEE00E61098 /* AboutController.m in Sources */,
+				231ED8BC187A799C001EB12D /* AlfvenVelocityController.m in Sources */,
+				231ED8C9187A799C001EB12D /* ElectronCollisionRateController.m in Sources */,
+				231ED8D0187A799C001EB12D /* ElectronInertialLengthController.m in Sources */,
+				231ED8BA187A799C001EB12D /* AlfvenVelocityLightController.m in Sources */,
+				231ED8F0187A799C001EB12D /* MagIonRestEnergyRatioController.m in Sources */,
+				231ED8DA187A799C001EB12D /* ElectronTrappingRateController.m in Sources */,
+				231ED8E2187A799C001EB12D /* IonGyroradiusController.m in Sources */,
+				231ED8C5187A799C001EB12D /* DebyeLengthController.m in Sources */,
+				231ED8EB187A799C001EB12D /* IonSoundVelocityController.m in Sources */,
+				231ED8E7187A799C001EB12D /* IonPlasGyroRatioController.m in Sources */,
+				231ED8D9187A799C001EB12D /* ElectronThermalVelocityController.m in Sources */,
+				23DA4ED2187A910D00FA759E /* TableViewController.m in Sources */,
+				231ED8F9187A799C001EB12D /* TransverseSpitzerController.m in Sources */,
+				231ED8C0187A799C001EB12D /* ClassicalDistanceMinimumApproachController.m in Sources */,
+				231ED8D5187A799C001EB12D /* ElectronPlasmaGyroRatioController.m in Sources */,
+				231ED8CE187A799C001EB12D /* ElectronGyroradiusController.m in Sources */,
+				231ED8EE187A799C001EB12D /* IonTrappingRateController.m in Sources */,
+				231ED8F3187A799C001EB12D /* NumberOfParticlesDebyeController.m in Sources */,
+				231ED8BE187A799C001EB12D /* BohmDiffusionController.m in Sources */,
+				231ED8D3187A799C001EB12D /* ElectronPlasmaFrequencyController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,10 +743,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FPP/FPP-Prefix.pch";
 				INFOPLIST_FILE = "FPP/FPP-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -397,10 +761,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FPP/FPP-Prefix.pch";
 				INFOPLIST_FILE = "FPP/FPP-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -466,6 +835,7 @@
 				23883D8F18692742002E50BA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		23883D9018692742002E50BA /* Build configuration list for PBXNativeTarget "FPPTests" */ = {
 			isa = XCConfigurationList;
@@ -474,6 +844,7 @@
 				23883D9218692742002E50BA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
