@@ -85,6 +85,7 @@
 		23883D8A18692742002E50BA /* FPPTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 23883D8918692742002E50BA /* FPPTests.m */; };
 		23AC5F5D187E5CEE00E61098 /* AboutController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23AC5F5C187E5CEE00E61098 /* AboutController.m */; };
 		23DA4ED2187A910D00FA759E /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23DA4ED1187A910D00FA759E /* TableViewController.m */; };
+		D257EAD418875719007E89D0 /* aboutLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = D257EAD318875719007E89D0 /* aboutLogo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -210,6 +211,7 @@
 		23AC5F5C187E5CEE00E61098 /* AboutController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutController.m; sourceTree = "<group>"; };
 		23DA4ED0187A910D00FA759E /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
 		23DA4ED1187A910D00FA759E /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		D257EAD318875719007E89D0 /* aboutLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aboutLogo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -320,6 +322,7 @@
 		23DA4EC7187A7C9200FA759E /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				D257EAD318875719007E89D0 /* aboutLogo.png */,
 				231ED86E187A799C001EB12D /* electronBroglieLength.png */,
 				231ED85A187A799C001EB12D /* alfenVelocityLight.png */,
 				231ED85D187A799C001EB12D /* alfven.png */,
@@ -552,6 +555,7 @@
 				231ED8E3187A799C001EB12D /* ionInertial.png in Resources */,
 				231ED8CD187A799C001EB12D /* electronGyroradius.png in Resources */,
 				231ED8DB187A799C001EB12D /* electronTrapRate.png in Resources */,
+				D257EAD418875719007E89D0 /* aboutLogo.png in Resources */,
 				231ED8DF187A799C001EB12D /* ionGyro-w.png in Resources */,
 				231ED8EC187A799C001EB12D /* ionThermal.png in Resources */,
 				231ED8C7187A799C001EB12D /* electronBroglieLength.png in Resources */,
