@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="12F37" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="rS3-R9-Ivy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="rS3-R9-Ivy">
     <dependencies>
         <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
@@ -4407,9 +4407,9 @@
                                         <rect key="frame" x="20" y="97" width="280" height="191"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <mutableString key="text">This App is meant to be used as a reference and not as a definitive resource for plasma computations. It features the Fundamental Plasma Parameters found on pg. 29 &amp; 30 of the 2006 NRL Plasma Formulary.
+                                        <string key="text">This App is meant to be used as a reference and not as a definitive resource for plasma computations. It features the Fundamental Plasma Parameters found on pg. 29 &amp; 30 of the 2006 NRL Plasma Formulary.
 
-All quantities are in Gaussian cgs units except temperature (T, Te, Ti) expressed in eV and ion mass (mi) expressed in units of the proton mass, µ = mi/mp; Z is charge state; k is Boltzmann’s constant; K is wavenumber; γ is the adiabatic index; ln Λ is the Coulomb logarithm.</mutableString>
+All quantities are in Gaussian cgs units except temperature (T, Te, Ti) expressed in eV and ion mass (mi) expressed in units of the proton mass, µ = mi/mp; Z is charge state; k is Boltzmann’s constant; K is wavenumber; γ is the adiabatic index; ln Λ is the Coulomb logarithm.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
@@ -4439,6 +4439,13 @@ All quantities are in Gaussian cgs units except temperature (T, Te, Ti) expresse
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VersionLabel" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ukY-D3-xAg">
+                                        <rect key="frame" x="223" y="68" width="77" height="12"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
@@ -4454,6 +4461,7 @@ All quantities are in Gaussian cgs units except temperature (T, Te, Ti) expresse
                     </navigationItem>
                     <connections>
                         <outlet property="messageButton" destination="tJd-vi-gsZ" id="RJj-7l-G27"/>
+                        <outlet property="versionLabel" destination="ukY-D3-xAg" id="E1L-cN-4lD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CxF-MH-Ngm" userLabel="First Responder" sceneMemberID="firstResponder"/>

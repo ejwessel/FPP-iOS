@@ -14,6 +14,7 @@
 
 @implementation AboutController
 @synthesize messageButton;
+@synthesize versionLabel;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -34,6 +35,11 @@
     UIColor *navColor = self.navigationController.navigationBar.tintColor;
     [self.messageButton.layer setBorderColor:navColor.CGColor];
     [self.messageButton setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
+    
+    NSDictionary *info = [[NSBundle mainBundle] infoDictionary];
+    NSString *version = [info objectForKey:@"CFBundleShortVersionString"];
+    version = [NSString stringWithFormat:@"Version %@", version];
+    versionLabel.text = version;
 }
 
 - (void)didReceiveMemoryWarning{

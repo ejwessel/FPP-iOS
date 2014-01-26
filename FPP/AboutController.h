@@ -10,5 +10,6 @@
 
 @interface AboutController : UIViewController
 @property (strong, nonatomic) IBOutlet UIButton *messageButton;
+@property (strong, nonatomic) IBOutlet UILabel *versionLabel;
 #define URLEMail @"mailto:fundamentalplasmaparams@gmail.com?subject=Feedback or Suggestions"
 @end
