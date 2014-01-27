@@ -6,14 +6,14 @@
 //  Copyright (c) 2014 test. All rights reserved.
 //
 
-#import "TransverseSpitzerController.h"
+#import "SpitzerResistivityController.h"
 
-@interface TransverseSpitzerController ()
+@interface SpitzerResistivityController ()
 
 @end
 
-@implementation TransverseSpitzerController
-@synthesize outputN;
+@implementation SpitzerResistivityController
+@synthesize outputNPerpendicular;
 @synthesize zInput;
 @synthesize lamdaInput;
 @synthesize tInput;
@@ -35,7 +35,7 @@
     [super viewDidLoad];
     
 	// Do any additional setup after loading the view.
-    self.title = @"Transverse Spitzer Resistivity";
+    self.title = @"Spitzer Resistivity";
     
     self.VALUE_CONST = 1.03 * pow(10, -2);
     
@@ -64,10 +64,15 @@
     self.tInputExponent.keyboardType = UIKeyboardTypeDecimalPad;
     self.tInputExponent.clearButtonMode = true;
     
-    self.outputN.text = @"0";
-    self.outputN.layer.borderWidth = 1.0;
-    self.outputN.layer.cornerRadius = 5;
-    self.outputN.layer.borderColor = self.navigationController.toolbar.tintColor.CGColor;
+    self.outputNPerpendicular.text = @"0";
+    self.outputNPerpendicular.layer.borderWidth = 1.0;
+    self.outputNPerpendicular.layer.cornerRadius = 5;
+    self.outputNPerpendicular.layer.borderColor = self.navigationController.toolbar.tintColor.CGColor;
+    
+    self.outputNParallel.text = @"0";
+    self.outputNParallel.layer.borderWidth = 1.0;
+    self.outputNParallel.layer.cornerRadius = 5;
+    self.outputNParallel.layer.borderColor = self.navigationController.toolbar.tintColor.CGColor;
     
     self.lambaLabel.text = @"ln\u039B =";
     
@@ -114,12 +119,14 @@
         NSLog(@"number: %g, %g, %g", z, l, t);
         
         //do calculations
-        float n = [self calculateWithInput:z with:l with:t];
+        float nPerp = [self calculateWithInput:z with:l with:t];
+        float nParallel = nPerp / 2.0;
         
-        self.outputN.text = [[NSString alloc] initWithFormat:@"%.3e", n];
+        self.outputNPerpendicular.text = [[NSString alloc] initWithFormat:@"%.3e", nPerp];
+        self.outputNParallel.text = [[NSString alloc] initWithFormat:@"%.3e", nParallel];
     }
     else{
-        self.outputN.text = @"Error with input";
+        self.outputNPerpendicular.text = @"Error with input";
     }
 }
 

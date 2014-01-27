@@ -69,7 +69,10 @@
 		231ED8F6187A799C001EB12D /* ThermalMagEnergyRatioController.m in Sources */ = {isa = PBXBuildFile; fileRef = 231ED8B4187A799C001EB12D /* ThermalMagEnergyRatioController.m */; };
 		231ED8F7187A799C001EB12D /* thermalMagRatio.png in Resources */ = {isa = PBXBuildFile; fileRef = 231ED8B5187A799C001EB12D /* thermalMagRatio.png */; };
 		231ED8F8187A799C001EB12D /* TransverseSpitzer.png in Resources */ = {isa = PBXBuildFile; fileRef = 231ED8B6187A799C001EB12D /* TransverseSpitzer.png */; };
-		231ED8F9187A799C001EB12D /* TransverseSpitzerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 231ED8B8187A799C001EB12D /* TransverseSpitzerController.m */; };
+		231ED8F9187A799C001EB12D /* SpitzerResistivityController.m in Sources */ = {isa = PBXBuildFile; fileRef = 231ED8B8187A799C001EB12D /* SpitzerResistivityController.m */; };
+		233951A418971A7F00187184 /* n_perp.png in Resources */ = {isa = PBXBuildFile; fileRef = 233951A218971A7F00187184 /* n_perp.png */; };
+		233951A518971A7F00187184 /* n_parallel.png in Resources */ = {isa = PBXBuildFile; fileRef = 233951A318971A7F00187184 /* n_parallel.png */; };
+		233951A718971B4600187184 /* parallelSpitzer.png in Resources */ = {isa = PBXBuildFile; fileRef = 233951A618971B4600187184 /* parallelSpitzer.png */; };
 		23883D5C18692742002E50BA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23883D5B18692742002E50BA /* Foundation.framework */; };
 		23883D5E18692742002E50BA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23883D5D18692742002E50BA /* CoreGraphics.framework */; };
 		23883D6018692742002E50BA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23883D5F18692742002E50BA /* UIKit.framework */; };
@@ -188,8 +191,11 @@
 		231ED8B4187A799C001EB12D /* ThermalMagEnergyRatioController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThermalMagEnergyRatioController.m; sourceTree = "<group>"; };
 		231ED8B5187A799C001EB12D /* thermalMagRatio.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thermalMagRatio.png; sourceTree = "<group>"; };
 		231ED8B6187A799C001EB12D /* TransverseSpitzer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TransverseSpitzer.png; sourceTree = "<group>"; };
-		231ED8B7187A799C001EB12D /* TransverseSpitzerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransverseSpitzerController.h; sourceTree = "<group>"; };
-		231ED8B8187A799C001EB12D /* TransverseSpitzerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransverseSpitzerController.m; sourceTree = "<group>"; };
+		231ED8B7187A799C001EB12D /* SpitzerResistivityController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpitzerResistivityController.h; sourceTree = "<group>"; };
+		231ED8B8187A799C001EB12D /* SpitzerResistivityController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpitzerResistivityController.m; sourceTree = "<group>"; };
+		233951A218971A7F00187184 /* n_perp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = n_perp.png; sourceTree = "<group>"; };
+		233951A318971A7F00187184 /* n_parallel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = n_parallel.png; sourceTree = "<group>"; };
+		233951A618971B4600187184 /* parallelSpitzer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = parallelSpitzer.png; sourceTree = "<group>"; };
 		23883D5818692742002E50BA /* FPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23883D5B18692742002E50BA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		23883D5D18692742002E50BA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -358,6 +364,9 @@
 				231ED8B0187A799C001EB12D /* ohmcm.png */,
 				231ED8B5187A799C001EB12D /* thermalMagRatio.png */,
 				231ED8B6187A799C001EB12D /* TransverseSpitzer.png */,
+				233951A218971A7F00187184 /* n_perp.png */,
+				233951A318971A7F00187184 /* n_parallel.png */,
+				233951A618971B4600187184 /* parallelSpitzer.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -447,8 +456,8 @@
 			children = (
 				231ED861187A799C001EB12D /* BohmDiffusionController.h */,
 				231ED862187A799C001EB12D /* BohmDiffusionController.m */,
-				231ED8B7187A799C001EB12D /* TransverseSpitzerController.h */,
-				231ED8B8187A799C001EB12D /* TransverseSpitzerController.m */,
+				231ED8B7187A799C001EB12D /* SpitzerResistivityController.h */,
+				231ED8B8187A799C001EB12D /* SpitzerResistivityController.m */,
 			);
 			name = Miscellaneous;
 			sourceTree = "<group>";
@@ -556,6 +565,7 @@
 				231ED8CD187A799C001EB12D /* electronGyroradius.png in Resources */,
 				231ED8DB187A799C001EB12D /* electronTrapRate.png in Resources */,
 				D257EAD418875719007E89D0 /* aboutLogo.png in Resources */,
+				233951A718971B4600187184 /* parallelSpitzer.png in Resources */,
 				231ED8DF187A799C001EB12D /* ionGyro-w.png in Resources */,
 				231ED8EC187A799C001EB12D /* ionThermal.png in Resources */,
 				231ED8C7187A799C001EB12D /* electronBroglieLength.png in Resources */,
@@ -566,9 +576,11 @@
 				231ED8F7187A799C001EB12D /* thermalMagRatio.png in Resources */,
 				231ED8CF187A799C001EB12D /* electronInertial.png in Resources */,
 				231ED8D4187A799C001EB12D /* electronPlasmaGyroRatio.png in Resources */,
+				233951A518971A7F00187184 /* n_parallel.png in Resources */,
 				231ED8DD187A799C001EB12D /* ionCollRate.png in Resources */,
 				231ED8C6187A799C001EB12D /* electroCollRate.png in Resources */,
 				231ED8C4187A799C001EB12D /* debyeLength.png in Resources */,
+				233951A418971A7F00187184 /* n_perp.png in Resources */,
 				231ED8BF187A799C001EB12D /* classicalDistance.png in Resources */,
 				23883D6F18692742002E50BA /* Main.storyboard in Resources */,
 			);
@@ -613,7 +625,7 @@
 				231ED8E7187A799C001EB12D /* IonPlasGyroRatioController.m in Sources */,
 				231ED8D9187A799C001EB12D /* ElectronThermalVelocityController.m in Sources */,
 				23DA4ED2187A910D00FA759E /* TableViewController.m in Sources */,
-				231ED8F9187A799C001EB12D /* TransverseSpitzerController.m in Sources */,
+				231ED8F9187A799C001EB12D /* SpitzerResistivityController.m in Sources */,
 				231ED8C0187A799C001EB12D /* ClassicalDistanceMinimumApproachController.m in Sources */,
 				231ED8D5187A799C001EB12D /* ElectronPlasmaGyroRatioController.m in Sources */,
 				231ED8CE187A799C001EB12D /* ElectronGyroradiusController.m in Sources */,

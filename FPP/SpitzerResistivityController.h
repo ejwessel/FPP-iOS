@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TransverseSpitzerController : UIViewController
-@property (strong, nonatomic) IBOutlet UILabel *outputN;
+@interface SpitzerResistivityController : UIViewController
+@property (strong, nonatomic) IBOutlet UILabel *outputNPerpendicular;
+@property (strong, nonatomic) IBOutlet UILabel *outputNParallel;
 @property (strong, nonatomic) IBOutlet UITextField *zInput;
 @property (strong, nonatomic) IBOutlet UITextField *lamdaInput;
 @property (strong, nonatomic) IBOutlet UITextField *tInput;
