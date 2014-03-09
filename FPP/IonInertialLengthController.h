@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Constants.h"
+#import "LNNumberpad.h"
 
 @interface IonInertialLengthController : UIViewController
 @property (strong, nonatomic) IBOutlet UILabel *outputAnswer;

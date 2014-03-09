@@ -15,9 +15,13 @@
 @implementation IonGyroradiusController
 @synthesize outputRadius;
 @synthesize muInput;
+@synthesize muInputExponent;
 @synthesize zInput;
+@synthesize zInputExponent;
 @synthesize tInput;
+@synthesize tInputExponent;
 @synthesize bInput;
+@synthesize bInputExponent;
 @synthesize muLabel;
 @synthesize RADIUS_CONST;
 
@@ -38,36 +42,36 @@
     self.RADIUS_CONST = 1.02 * pow(10, 2);
     
     self.muInput.text = @"";
-    self.muInput.keyboardType = UIKeyboardTypeDecimalPad;
+    self.muInput.inputView = [LNNumberpad defaultLNNumberpad];;
     self.muInput.clearButtonMode = true;
     [self.muInput becomeFirstResponder];
     
     self.zInput.text = @"";
-    self.zInput.keyboardType = UIKeyboardTypeDecimalPad;
+    self.zInput.inputView = [LNNumberpad defaultLNNumberpad];;
     self.zInput.clearButtonMode = true;
     
     self.tInput.text = @"";
-    self.tInput.keyboardType = UIKeyboardTypeDecimalPad;
+    self.tInput.inputView = [LNNumberpad defaultLNNumberpad];;
     self.tInput.clearButtonMode = true;
     
     self.bInput.text = @"";
-    self.bInput.keyboardType = UIKeyboardTypeDecimalPad;
+    self.bInput.inputView = [LNNumberpad defaultLNNumberpad];;
     self.bInput.clearButtonMode = true;
     
     self.muInputExponent.text = @"0";
-    self.muInputExponent.keyboardType = UIKeyboardTypeDecimalPad;
+    self.muInputExponent.inputView = [LNNumberpad defaultLNNumberpad];;
     self.muInputExponent.clearButtonMode = true;
     
     self.zInputExponent.text = @"0";
-    self.zInputExponent.keyboardType = UIKeyboardTypeDecimalPad;
+    self.zInputExponent.inputView = [LNNumberpad defaultLNNumberpad];;
     self.zInputExponent.clearButtonMode = true;
     
     self.tInputExponent.text = @"0";
-    self.tInputExponent.keyboardType = UIKeyboardTypeDecimalPad;
+    self.tInputExponent.inputView = [LNNumberpad defaultLNNumberpad];;
     self.tInputExponent.clearButtonMode = true;
     
     self.bInputExponent.text = @"0";
-    self.bInputExponent.keyboardType = UIKeyboardTypeDecimalPad;
+    self.bInputExponent.inputView = [LNNumberpad defaultLNNumberpad];;
     self.bInputExponent.clearButtonMode = true;
     
     self.outputRadius.text = @"0";
@@ -97,25 +101,46 @@
     
     NSLog(@"text changed");
     
-    //do checks...
-    NSArray *chunks1 = [self.muInput.text componentsSeparatedByString:@"."];
-    NSArray *chunks2 = [self.zInput.text componentsSeparatedByString:@"."];
-    NSArray *chunks3 = [self.tInput.text componentsSeparatedByString:@"."];
-    NSArray *chunks4 = [self.bInput.text componentsSeparatedByString:@"."];
-    NSArray *chunks1Exponent = [self.muInputExponent.text componentsSeparatedByString:@"."];
-    NSArray *chunks2Exponent = [self.zInputExponent.text componentsSeparatedByString:@"."];
-    NSArray *chunks3Exponent = [self.tInputExponent.text componentsSeparatedByString:@"."];
-    NSArray *chunks4Exponent = [self.bInputExponent.text componentsSeparatedByString:@"."];
-    Boolean error = false;
-    //check no more than 1 decimal point
-    if(chunks1.count > 2 || chunks2.count > 2 || chunks3.count > 2 || chunks4.count > 2
-       || chunks1Exponent.count > 1 || chunks2Exponent.count > 1 || chunks3Exponent.count > 1 || chunks4Exponent.count > 1
-       || [self.muInputExponent.text isEqualToString:@""] || [self.zInputExponent.text isEqualToString:@""] || [self.tInputExponent.text isEqualToString:@""] || [self.bInputExponent.text isEqualToString:@""]){
-        //display error message
-        error = true;
-    }
+    NSError *regError = NULL;
+    NSRegularExpression *regexBase = [NSRegularExpression regularExpressionWithPattern:BASE_REGEX
+                                                                               options:0
+                                                                                 error:&regError];
+    NSRegularExpression *regexExp = [NSRegularExpression regularExpressionWithPattern:EXP_REGEX
+                                                                              options:0
+                                                                                error:&regError];
+    NSRange mu_base = [regexBase rangeOfFirstMatchInString:muInput.text
+                                                  options:0
+                                                    range:NSMakeRange(0,[muInput.text length])];
+    NSRange mu_exp = [regexExp rangeOfFirstMatchInString:muInputExponent.text
+                                                options:0
+                                                  range:NSMakeRange(0,[muInputExponent.text length])];
+    NSRange z_base = [regexBase rangeOfFirstMatchInString:zInput.text
+                                                   options:0
+                                                     range:NSMakeRange(0,[zInput.text length])];
+    NSRange z_exp = [regexExp rangeOfFirstMatchInString:zInputExponent.text
+                                                 options:0
+                                                   range:NSMakeRange(0,[zInputExponent.text length])];
+    NSRange t_base = [regexBase rangeOfFirstMatchInString:tInput.text
+                                                   options:0
+                                                     range:NSMakeRange(0,[tInput.text length])];
+    NSRange t_exp = [regexExp rangeOfFirstMatchInString:tInputExponent.text
+                                                 options:0
+                                                   range:NSMakeRange(0,[tInputExponent.text length])];
+    NSRange b_base = [regexBase rangeOfFirstMatchInString:bInput.text
+                                                   options:0
+                                                     range:NSMakeRange(0,[bInput.text length])];
+    NSRange b_exp = [regexExp rangeOfFirstMatchInString:bInputExponent.text
+                                                 options:0
+                                                   range:NSMakeRange(0,[bInputExponent.text length])];
     
-    if(!error){
+    if(b_base.location != NSNotFound
+       && b_exp.location != NSNotFound
+       && z_base.location != NSNotFound
+       && z_exp.location != NSNotFound
+       && mu_base.location != NSNotFound
+       && mu_exp.location != NSNotFound
+       && t_base.location != NSNotFound
+       && t_exp.location != NSNotFound){
         float m = [self.muInput.text floatValue] * pow(10, [self.muInputExponent.text floatValue]);
         float z = [self.zInput.text floatValue] * pow(10, [self.zInputExponent.text floatValue]);
         float t = [self.tInput.text floatValue] * pow(10, [self.tInputExponent.text floatValue]);
