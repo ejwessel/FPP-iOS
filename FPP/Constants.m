@@ -8,7 +8,7 @@
 
 #import "Constants.h"
 
-NSString *const BASE_REGEX = @"^[-]?[\\d]*[.]?[\\d]*$";
+NSString *const BASE_REGEX = @"^[-]?[\\d]*[.]?[\\d]+$";
 NSString *const EXP_REGEX = @"^[-]?[\\d]*$";
 
 @implementation Constants

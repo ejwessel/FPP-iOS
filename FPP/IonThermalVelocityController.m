@@ -15,7 +15,9 @@
 @implementation IonThermalVelocityController
 @synthesize outputVelocity;
 @synthesize muInput;
+@synthesize muInputExponent;
 @synthesize tInput;
+@synthesize tInputExponent;
 @synthesize VELOCITY_CONST;
 @synthesize muLabel;
 
@@ -36,20 +38,20 @@
     self.VELOCITY_CONST = 9.79 * pow(10, 5);
     
     self.muInput.text = @"";
-    self.muInput.keyboardType = UIKeyboardTypeDecimalPad;
+    self.muInput.inputView = [LNNumberpad defaultLNNumberpad];;
     self.muInput.clearButtonMode = true;
     [self.muInput becomeFirstResponder];
     
     self.tInput.text = @"";
-    self.tInput.keyboardType = UIKeyboardTypeDecimalPad;
+    self.tInput.inputView = [LNNumberpad defaultLNNumberpad];;
     self.tInput.clearButtonMode = true;
     
     self.muInputExponent.text = @"0";
-    self.muInputExponent.keyboardType = UIKeyboardTypeDecimalPad;
+    self.muInputExponent.inputView = [LNNumberpad defaultLNNumberpad];;
     self.muInputExponent.clearButtonMode = true;
     
     self.tInputExponent.text = @"0";
-    self.tInputExponent.keyboardType = UIKeyboardTypeDecimalPad;
+    self.tInputExponent.inputView = [LNNumberpad defaultLNNumberpad];;
     self.tInputExponent.clearButtonMode = true;
     
     self.outputVelocity.text = @"0";
@@ -78,22 +80,29 @@
 - (void) textChanged:(NSNotification *)note{
     
     NSLog(@"text changed");
-    
-    //do checks...
-    NSArray *chunks1 = [self.muInput.text componentsSeparatedByString:@"."];
-    NSArray *chunks2 = [self.tInput.text componentsSeparatedByString:@"."];
-    NSArray *chunks1Exponent = [self.muInputExponent.text componentsSeparatedByString:@"."];
-    NSArray *chunks2Exponent = [self.tInputExponent.text componentsSeparatedByString:@"."];
-    Boolean error = false;
-    //check no more than 1 decimal point
-    if(chunks1.count > 2 || chunks2.count > 2
-       || chunks1Exponent.count > 1 || chunks2Exponent.count > 1
-       || [self.muInputExponent.text isEqualToString:@""] || [self.tInputExponent.text isEqualToString:@""]){
-        //display error message
-        error = true;
-    }
-    
-    if(!error){
+    NSError *regError = NULL;
+    NSRegularExpression *regexBase = [NSRegularExpression regularExpressionWithPattern:BASE_REGEX
+                                                                               options:0
+                                                                                 error:&regError];
+    NSRegularExpression *regexExp = [NSRegularExpression regularExpressionWithPattern:EXP_REGEX
+                                                                              options:0
+                                                                                error:&regError];
+    NSRange mu_base = [regexBase rangeOfFirstMatchInString:muInput.text
+                                                  options:0
+                                                    range:NSMakeRange(0,[muInput.text length])];
+    NSRange mu_exp = [regexExp rangeOfFirstMatchInString:muInputExponent.text
+                                                options:0
+                                                  range:NSMakeRange(0,[muInputExponent.text length])];
+    NSRange t_base = [regexBase rangeOfFirstMatchInString:tInput.text
+                                                   options:0
+                                                     range:NSMakeRange(0,[tInput.text length])];
+    NSRange t_exp = [regexExp rangeOfFirstMatchInString:tInputExponent.text
+                                                 options:0
+                                                   range:NSMakeRange(0,[tInputExponent.text length])];
+    if(mu_base.location != NSNotFound
+       && mu_exp.location != NSNotFound
+       && t_base.location != NSNotFound
+       && t_exp.location != NSNotFound){
         float m = [self.muInput.text floatValue] * pow(10, [self.muInputExponent.text floatValue]);
         float t = [self.tInput.text floatValue] * pow(10, [self.tInputExponent.text floatValue]);
         NSLog(@"number: %g, %g", m, t);
