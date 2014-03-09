@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Constants.h"
+#import "LNNumberpad.h"
 
 @interface SpitzerResistivityController : UIViewController
 @property (strong, nonatomic) IBOutlet UILabel *outputNPerpendicular;
@@ -17,7 +19,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *lambaLabel;
 @property (strong, nonatomic) IBOutlet UITextField *tInputExponent;
 @property (strong, nonatomic) IBOutlet UITextField *zInputExponent;
-@property (strong, nonatomic) IBOutlet UITextField *lambdaInputExponent;
+@property (strong, nonatomic) IBOutlet UITextField *lamdaInputExponent;
 
 @property const float VALUE_CONST;
 

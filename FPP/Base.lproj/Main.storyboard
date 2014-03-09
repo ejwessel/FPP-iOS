@@ -4392,8 +4392,8 @@
                     <navigationItem key="navigationItem" id="5db-wA-HdE"/>
                     <connections>
                         <outlet property="lambaLabel" destination="jkj-aI-rsc" id="y23-xA-vZJ"/>
-                        <outlet property="lambdaInputExponent" destination="poY-cC-nPe" id="OUV-9x-IlQ"/>
-                        <outlet property="lamdaInput" destination="YGu-0E-9h1" id="f9s-0Z-T4T"/>
+                        <outlet property="lamdaInput" destination="YGu-0E-9h1" id="UED-of-VFB"/>
+                        <outlet property="lamdaInputExponent" destination="poY-cC-nPe" id="Jp4-FR-L8M"/>
                         <outlet property="outputNParallel" destination="BZo-NA-TKt" id="4PG-fU-6YU"/>
                         <outlet property="outputNPerpendicular" destination="bfp-IR-QM3" id="ZXc-yb-FRP"/>
                         <outlet property="tInput" destination="jwb-eP-qxX" id="4zk-QN-MKz"/>

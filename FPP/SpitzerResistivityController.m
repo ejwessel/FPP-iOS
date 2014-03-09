@@ -20,7 +20,7 @@
 @synthesize VALUE_CONST;
 @synthesize lambaLabel;
 @synthesize zInputExponent;
-@synthesize lambdaInputExponent;
+@synthesize lamdaInputExponent;
 @synthesize tInputExponent;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
@@ -40,28 +40,28 @@
     self.VALUE_CONST = 1.03 * pow(10, -2);
     
     self.zInput.text = @"";
-    self.zInput.keyboardType = UIKeyboardTypeDecimalPad;
+    self.zInput.inputView = [LNNumberpad defaultLNNumberpad];;
     self.zInput.clearButtonMode = true;
     [self.zInput becomeFirstResponder];
     
     self.lamdaInput.text = @"";
-    self.lamdaInput.keyboardType = UIKeyboardTypeDecimalPad;
+    self.lamdaInput.inputView = [LNNumberpad defaultLNNumberpad];;
     self.lamdaInput.clearButtonMode = true;
     
     self.tInput.text = @"";
-    self.tInput.keyboardType = UIKeyboardTypeDecimalPad;
+    self.tInput.inputView = [LNNumberpad defaultLNNumberpad];;
     self.tInput.clearButtonMode = true;
     
     self.zInputExponent.text = @"0";
-    self.zInputExponent.keyboardType = UIKeyboardTypeDecimalPad;
+    self.zInputExponent.inputView = [LNNumberpad defaultLNNumberpad];;
     self.zInputExponent.clearButtonMode = true;
     
-    self.lambdaInputExponent.text = @"0";
-    self.lambdaInputExponent.keyboardType = UIKeyboardTypeDecimalPad;
-    self.lambdaInputExponent.clearButtonMode = true;
+    self.lamdaInputExponent.text = @"0";
+    self.lamdaInputExponent.inputView = [LNNumberpad defaultLNNumberpad];;
+    self.lamdaInputExponent.clearButtonMode = true;
     
     self.tInputExponent.text = @"0";
-    self.tInputExponent.keyboardType = UIKeyboardTypeDecimalPad;
+    self.tInputExponent.inputView = [LNNumberpad defaultLNNumberpad];;
     self.tInputExponent.clearButtonMode = true;
     
     self.outputNPerpendicular.text = @"0";
@@ -95,26 +95,40 @@
 - (void) textChanged:(NSNotification *)note{
     
     NSLog(@"text changed");
-    
-    //do checks...
-    NSArray *chunks1 = [self.zInput.text componentsSeparatedByString:@"."];
-    NSArray *chunks2 = [self.lamdaInput.text componentsSeparatedByString:@"."];
-    NSArray *chunks3 = [self.tInput.text componentsSeparatedByString:@"."];
-    NSArray *chunks1Exponent = [self.zInputExponent.text componentsSeparatedByString:@"."];
-    NSArray *chunks2Exponent = [self.lambdaInputExponent.text componentsSeparatedByString:@"."];
-    NSArray *chunks3Exponent = [self.tInputExponent.text componentsSeparatedByString:@"."];
-    Boolean error = false;
-    //check no more than 1 decimal point
-    if(chunks1.count > 2 || chunks2.count > 2 || chunks3.count > 2
-       || chunks1Exponent.count > 1 || chunks2Exponent.count > 1 || chunks3Exponent.count > 1
-       || [self.zInputExponent.text isEqualToString:@""] || [self.lambdaInputExponent.text isEqualToString:@""] || [self.tInputExponent.text isEqualToString:@""]){
-        //display error message
-        error = true;
-    }
-    
-    if(!error){
+    NSError *regError = NULL;
+    NSRegularExpression *regexBase = [NSRegularExpression regularExpressionWithPattern:BASE_REGEX
+                                                                               options:0
+                                                                                 error:&regError];
+    NSRegularExpression *regexExp = [NSRegularExpression regularExpressionWithPattern:EXP_REGEX
+                                                                              options:0
+                                                                                error:&regError];
+    NSRange z_base = [regexBase rangeOfFirstMatchInString:zInput.text
+                                                  options:0
+                                                    range:NSMakeRange(0,[zInput.text length])];
+    NSRange z_exp = [regexExp rangeOfFirstMatchInString:zInputExponent.text
+                                                options:0
+                                                  range:NSMakeRange(0,[zInputExponent.text length])];
+    NSRange lamda_base = [regexBase rangeOfFirstMatchInString:lamdaInput.text
+                                                  options:0
+                                                    range:NSMakeRange(0,[lamdaInput.text length])];
+    NSRange lamda_exp = [regexExp rangeOfFirstMatchInString:lamdaInputExponent.text
+                                                options:0
+                                                  range:NSMakeRange(0,[lamdaInputExponent.text length])];
+    NSRange t_base = [regexBase rangeOfFirstMatchInString:tInput.text
+                                                  options:0
+                                                    range:NSMakeRange(0,[tInput.text length])];
+    NSRange t_exp = [regexExp rangeOfFirstMatchInString:tInputExponent.text
+                                                options:0
+                                                  range:NSMakeRange(0,[tInputExponent.text length])];
+   
+    if(t_base.location != NSNotFound
+       && t_exp.location != NSNotFound
+       && z_base.location != NSNotFound
+       && z_exp.location != NSNotFound
+       && lamda_base.location != NSNotFound
+       && lamda_exp.location != NSNotFound){
         float z = [self.zInput.text floatValue] * pow(10, [self.zInputExponent.text floatValue]);
-        float l = [self.lamdaInput.text floatValue] * pow(10, [self.lambdaInputExponent.text floatValue]);
+        float l = [self.lamdaInput.text floatValue] * pow(10, [self.lamdaInputExponent.text floatValue]);
         float t = [self.tInput.text floatValue] * pow(10, [self.tInputExponent.text floatValue]);
         NSLog(@"number: %g, %g, %g", z, l, t);
         
