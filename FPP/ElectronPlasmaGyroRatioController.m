@@ -37,20 +37,20 @@
     self.VALUE_CONST = 3.21 * pow(10, -3);
     
     self.nInput.text = @"";
-    self.nInput.keyboardType = UIKeyboardTypeDecimalPad;
+    self.nInput.inputView = [LNNumberpad defaultLNNumberpad];
     self.nInput.clearButtonMode = true;
     [self.nInput becomeFirstResponder];
     
     self.bInput.text = @"";
-    self.bInput.keyboardType = UIKeyboardTypeDecimalPad;
+    self.bInput.inputView = [LNNumberpad defaultLNNumberpad];
     self.bInput.clearButtonMode = true;
     
     self.nInputExponent.text = @"0";
-    self.nInputExponent.keyboardType = UIKeyboardTypeDecimalPad;
+    self.nInputExponent.inputView = [LNNumberpad defaultLNNumberpad];
     self.nInputExponent.clearButtonMode = true;
     
     self.bInputExponent.text = @"0";
-    self.bInputExponent.keyboardType = UIKeyboardTypeDecimalPad;
+    self.bInputExponent.inputView = [LNNumberpad defaultLNNumberpad];
     self.bInputExponent.clearButtonMode = true;
     
     self.outputAnswer.text = @"0";
@@ -78,21 +78,29 @@
     
     NSLog(@"text changed");
     
-    //do checks...
-    NSArray *chunks1 = [self.nInput.text componentsSeparatedByString:@"."];
-    NSArray *chunks2 = [self.bInput.text componentsSeparatedByString:@"."];
-    NSArray *chunks1Exponent = [self.nInputExponent.text componentsSeparatedByString:@"."];
-    NSArray *chunks2Exponent = [self.bInputExponent.text componentsSeparatedByString:@"."];
-    Boolean error = false;
-    //check no more than 1 decimal point
-    if(chunks1.count > 2 || chunks2.count > 2
-       || chunks1Exponent.count > 1 || chunks2Exponent.count > 1
-       || [self.nInputExponent.text isEqualToString:@""] || [self.bInputExponent.text isEqualToString:@""]){
-        //display error message
-        error = true;
-    }
-    
-    if(!error){
+    NSError *regError = NULL;
+    NSRegularExpression *regexBase = [NSRegularExpression regularExpressionWithPattern:BASE_REGEX
+                                                                               options:0
+                                                                                 error:&regError];
+    NSRegularExpression *regexExp = [NSRegularExpression regularExpressionWithPattern:EXP_REGEX
+                                                                              options:0
+                                                                                error:&regError];
+    NSRange n_base = [regexBase rangeOfFirstMatchInString:nInput.text
+                                                  options:0
+                                                    range:NSMakeRange(0,[nInput.text length])];
+    NSRange n_exp = [regexExp rangeOfFirstMatchInString:nInputExponent.text
+                                                options:0
+                                                  range:NSMakeRange(0,[nInputExponent.text length])];
+    NSRange b_base = [regexBase rangeOfFirstMatchInString:bInput.text
+                                                  options:0
+                                                    range:NSMakeRange(0,[bInput.text length])];
+    NSRange b_exp = [regexExp rangeOfFirstMatchInString:bInputExponent.text
+                                                options:0
+                                                  range:NSMakeRange(0,[bInputExponent.text length])];
+    if(b_base.location != NSNotFound
+       && b_exp.location != NSNotFound
+       && n_base.location != NSNotFound
+       && n_exp.location != NSNotFound){
         float n = [self.nInput.text floatValue] * pow(10, [self.nInputExponent.text floatValue]);
         float b = [self.bInput.text floatValue] * pow(10, [self.bInputExponent.text floatValue]);
         NSLog(@"number: %g, %g", n, b);
