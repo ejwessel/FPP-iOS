@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LNNumberpad.h"
+#import "Constants.h"
 
 @interface ElectronGyrofrequencyController : UIViewController
 

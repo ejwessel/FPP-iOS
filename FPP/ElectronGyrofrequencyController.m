@@ -42,12 +42,12 @@
 
     
     self.bInput.text = @"";
-    self.bInput.keyboardType = UIKeyboardTypeDecimalPad;
+    self.bInput.inputView = [LNNumberpad defaultLNNumberpad];
     self.bInput.clearButtonMode = true;
     [self.bInput becomeFirstResponder];
     
     self.bInputExponent.text = @"0";
-    self.bInputExponent.keyboardType = UIKeyboardTypeDecimalPad;
+    self.bInputExponent.inputView = [LNNumberpad defaultLNNumberpad];
     self.bInputExponent.clearButtonMode = true;
     
     self.outputFrequency.text = @"0";
@@ -87,18 +87,22 @@
     
     NSLog(@"text changed");
     
-    //do checks...
-    NSArray *chunks = [self.bInput.text componentsSeparatedByString:@"."];
-    NSArray *chunksExponent = [self.bInputExponent.text componentsSeparatedByString:@"."];
-    Boolean error = false;
-    //check no more than 1 decimal point
-    if(chunks.count > 2
-       || chunksExponent.count > 1 || [self.bInputExponent.text isEqualToString:@""]){
-        //display error message
-        error = true;
-    }
+    NSError *regError = NULL;
+    NSRegularExpression *regexBase = [NSRegularExpression regularExpressionWithPattern:BASE_REGEX
+                                                                           options:0
+                                                                             error:&regError];
+    NSRegularExpression *regexExp = [NSRegularExpression regularExpressionWithPattern:EXP_REGEX
+                                                                              options:0
+                                                                                error:&regError];
+    NSRange b_base = [regexBase rangeOfFirstMatchInString:bInput.text
+                                               options:0
+                                                 range:NSMakeRange(0, [bInput.text length])];
+    NSRange b_exp = [regexExp rangeOfFirstMatchInString:bInputExponent.text
+                                              options:0
+                                                range:NSMakeRange(0, [bInputExponent.text length])];
     
-    if(!error){
+    if(b_base.location != NSNotFound
+       && b_exp.location != NSNotFound){
         float B = [self.bInput.text floatValue] * pow(10, [self.bInputExponent.text floatValue]);
         NSLog(@"number: %g", B);
         

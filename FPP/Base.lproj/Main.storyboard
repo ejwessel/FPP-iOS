@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="rS3-R9-Ivy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="rS3-R9-Ivy">
     <dependencies>
         <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
@@ -688,7 +688,7 @@
                     </scrollView>
                     <navigationItem key="navigationItem" id="bZ7-Sa-p4V"/>
                     <connections>
-                        <outlet property="bInput" destination="oKe-xN-u8J" id="GpY-zO-Dmt"/>
+                        <outlet property="bInput" destination="0sY-hk-4T9" id="h8Z-O0-iCb"/>
                         <outlet property="bInputExponent" destination="rT2-1J-WrF" id="UEY-B9-Cmy"/>
                         <outlet property="frequencyLabel" destination="wPP-Xs-eKb" id="sci-oV-bQt"/>
                         <outlet property="magneticFieldLabel" destination="cgE-8x-RgR" id="Kj6-yn-kJW"/>
@@ -698,7 +698,7 @@
                         <outlet property="omegaLabel" destination="aCE-TL-ADu" id="Zkb-cB-dFi"/>
                         <outlet property="outputFrequency" destination="IyT-OY-cp9" id="MPH-bT-Sik"/>
                         <outlet property="outputOmega" destination="ctU-7M-GfV" id="fdP-0e-EMQ"/>
-                        <outlet property="zInput" destination="0sY-hk-4T9" id="hyM-Y6-MEH"/>
+                        <outlet property="zInput" destination="oKe-xN-u8J" id="NBX-Kj-Zgh"/>
                         <outlet property="zInputExponent" destination="XC1-Jm-hKs" id="kqM-KF-v7c"/>
                         <outlet property="zetaLabel" destination="16G-TL-plE" id="2hI-IM-KYz"/>
                     </connections>
@@ -2561,7 +2561,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Alfven Velocity" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="L4s-40-1Zr">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Alfvén Velocity" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="L4s-40-1Zr">
                                                     <rect key="frame" x="15" y="0.0" width="270" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
@@ -2651,7 +2651,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Alfven Velocity/Spd. of Light" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Tmp-lU-bki">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Alfvén Velocity/Spd. of Light" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Tmp-lU-bki">
                                                     <rect key="frame" x="15" y="0.0" width="270" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>

@@ -44,36 +44,36 @@
     self.VEL_CONST = 1.69 * pow(10, 7);
     
     self.zInput.text = @"";
-    self.zInput.keyboardType = UIKeyboardTypeDecimalPad;
+    self.zInput.inputView = [LNNumberpad defaultLNNumberpad];;
     self.zInput.clearButtonMode = true;
     [self.zInput becomeFirstResponder];
     
     self.kInput.text = @"";
-    self.kInput.keyboardType = UIKeyboardTypeDecimalPad;
+    self.kInput.inputView = [LNNumberpad defaultLNNumberpad];;
     self.kInput.clearButtonMode = true;
     
     self.eInput.text = @"";
-    self.eInput.keyboardType = UIKeyboardTypeDecimalPad;
+    self.eInput.inputView = [LNNumberpad defaultLNNumberpad];;
     self.eInput.clearButtonMode = true;
     
     self.muInput.text = @"";
-    self.muInput.keyboardType = UIKeyboardTypeDecimalPad;
+    self.muInput.inputView = [LNNumberpad defaultLNNumberpad];;
     self.muInput.clearButtonMode = true;
 
     self.zInputExponent.text = @"0";
-    self.zInputExponent.keyboardType = UIKeyboardTypeDecimalPad;
+    self.zInputExponent.inputView = [LNNumberpad defaultLNNumberpad];;
     self.zInputExponent.clearButtonMode = true;
     
     self.kInputExponent.text = @"0";
-    self.kInputExponent.keyboardType = UIKeyboardTypeDecimalPad;
+    self.kInputExponent.inputView = [LNNumberpad defaultLNNumberpad];;
     self.kInputExponent.clearButtonMode = true;
     
     self.eInputExponent.text = @"0";
-    self.eInputExponent.keyboardType = UIKeyboardTypeDecimalPad;
+    self.eInputExponent.inputView = [LNNumberpad defaultLNNumberpad];;
     self.eInputExponent.clearButtonMode = true;
     
     self.muInputExponent.text = @"0";
-    self.muInputExponent.keyboardType = UIKeyboardTypeDecimalPad;
+    self.muInputExponent.inputView = [LNNumberpad defaultLNNumberpad];;
     self.muInputExponent.clearButtonMode = true;
     
     self.outputVelocity.text = @"0";
@@ -102,26 +102,46 @@
 - (void) textChanged:(NSNotification *)note{
     
     NSLog(@"text changed");
+    NSError *regError = NULL;
+    NSRegularExpression *regexBase = [NSRegularExpression regularExpressionWithPattern:BASE_REGEX
+                                                                               options:0
+                                                                                 error:&regError];
+    NSRegularExpression *regexExp = [NSRegularExpression regularExpressionWithPattern:EXP_REGEX
+                                                                              options:0
+                                                                                error:&regError];
+    NSRange z_base = [regexBase rangeOfFirstMatchInString:zInput.text
+                                                  options:0
+                                                    range:NSMakeRange(0,[zInput.text length])];
+    NSRange z_exp = [regexExp rangeOfFirstMatchInString:zInputExponent.text
+                                                options:0
+                                                  range:NSMakeRange(0,[zInputExponent.text length])];
+    NSRange k_base = [regexBase rangeOfFirstMatchInString:kInput.text
+                                                  options:0
+                                                    range:NSMakeRange(0,[kInput.text length])];
+    NSRange k_exp = [regexExp rangeOfFirstMatchInString:kInputExponent.text
+                                                options:0
+                                                  range:NSMakeRange(0,[kInputExponent.text length])];
+    NSRange e_base = [regexBase rangeOfFirstMatchInString:eInput.text
+                                                  options:0
+                                                    range:NSMakeRange(0,[eInput.text length])];
+    NSRange e_exp = [regexExp rangeOfFirstMatchInString:eInputExponent.text
+                                                options:0
+                                                  range:NSMakeRange(0,[eInputExponent.text length])];
+    NSRange mu_base = [regexBase rangeOfFirstMatchInString:muInput.text
+                                                  options:0
+                                                    range:NSMakeRange(0,[muInput.text length])];
+    NSRange mu_exp = [regexExp rangeOfFirstMatchInString:muInputExponent.text
+                                                options:0
+                                                  range:NSMakeRange(0,[muInputExponent.text length])];
     
-    //do checks...
-    NSArray *chunks1 = [self.zInput.text componentsSeparatedByString:@"."];
-    NSArray *chunks2 = [self.kInput.text componentsSeparatedByString:@"."];
-    NSArray *chunks3 = [self.eInput.text componentsSeparatedByString:@"."];
-    NSArray *chunks4 = [self.muInput.text componentsSeparatedByString:@"."];
-    NSArray *chunks1Exponent = [self.zInputExponent.text componentsSeparatedByString:@"."];
-    NSArray *chunks2Exponent = [self.kInputExponent.text componentsSeparatedByString:@"."];
-    NSArray *chunks3Exponent = [self.eInputExponent.text componentsSeparatedByString:@"."];
-    NSArray *chunks4Exponent = [self.muInputExponent.text componentsSeparatedByString:@"."];
-    Boolean error = false;
-    //check no more than 1 decimal point
-    if(chunks1.count > 2 || chunks2.count > 2 || chunks3.count >2 || chunks4.count > 2
-       || chunks1Exponent.count > 1 || chunks2Exponent.count > 1 || chunks3Exponent.count > 1 || chunks4Exponent.count > 1
-       || [self.zInputExponent.text isEqualToString:@""] || [self.kInputExponent.text isEqualToString:@""] || [self.eInputExponent.text isEqualToString:@""] || [self.muInputExponent.text isEqualToString:@""]){
-        //display error message
-        error = true;
-    }
-    
-    if(!error){
+    if(k_base.location != NSNotFound
+       && k_exp.location != NSNotFound
+       && z_base.location != NSNotFound
+       && z_exp.location != NSNotFound
+       && mu_base.location != NSNotFound
+       && mu_exp.location != NSNotFound
+       && e_base.location != NSNotFound
+       && e_exp.location != NSNotFound){
         float z = [self.zInput.text floatValue] * pow(10, [self.zInputExponent.text floatValue]);
         float k = [self.kInput.text floatValue] * pow(10, [self.kInputExponent.text floatValue]);
         float e = [self.eInput.text floatValue] * pow(10, [self.eInputExponent.text floatValue]);

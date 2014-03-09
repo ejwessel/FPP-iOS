@@ -34,7 +34,7 @@
     [super viewDidLoad];
     
 	// Do any additional setup after loading the view.
-    self.title = @"Alfven Velocity(c)";
+    self.title = @"Alfv\u00E9n Velocity/c";
     
     self.VALUE_CONST = 7.28;
     

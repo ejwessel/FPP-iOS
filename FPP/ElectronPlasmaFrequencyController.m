@@ -43,12 +43,12 @@
     
     
     self.inputValue.text = @"";
-    self.inputValue.keyboardType = UIKeyboardTypeDecimalPad;
+    self.inputValue.inputView = [LNNumberpad defaultLNNumberpad];
     self.inputValue.clearButtonMode = true;
     [self.inputValue becomeFirstResponder];
     
     self.inputValueExponent.text = @"0";
-    self.inputValueExponent.keyboardType = UIKeyboardTypeDecimalPad;
+    self.inputValueExponent.inputView = [LNNumberpad defaultLNNumberpad];
     self.inputValueExponent.clearButtonMode = true;
     
     self.outputFrequency.text = @"0";
@@ -88,19 +88,22 @@
     
     NSLog(@"text changed");
     
-    //do checks...
-    NSArray *chunks = [self.inputValue.text componentsSeparatedByString:@"."];
-    NSArray *chunksExponent = [self.inputValueExponent.text componentsSeparatedByString:@"."];
-    Boolean error = false;
-    //check no more than 1 decimal point
-    if(chunks.count > 2
-       || chunksExponent.count > 1
-       || [self.inputValueExponent.text isEqualToString:@""]){
-        //display error message
-        error = true;
-    }
+    NSError *regError = NULL;
+    NSRegularExpression *regexBase = [NSRegularExpression regularExpressionWithPattern:BASE_REGEX
+                                                                               options:0
+                                                                                 error:&regError];
+    NSRegularExpression *regexExp = [NSRegularExpression regularExpressionWithPattern:EXP_REGEX
+                                                                              options:0
+                                                                                error:&regError];
+     NSRange base = [regexBase rangeOfFirstMatchInString:inputValue.text
+                                                   options:0
+                                                     range:NSMakeRange(0,[inputValue.text length])];
+     NSRange exp = [regexExp rangeOfFirstMatchInString:inputValueExponent.text
+                                                 options:0
+                                                   range:NSMakeRange(0,[inputValueExponent.text length])];
     
-    if(!error){
+    if(base.location != NSNotFound
+       && exp.location != NSNotFound){
         float B = [self.inputValue.text floatValue] * pow(10, [self.inputValueExponent.text floatValue]);
         NSLog(@"number: %g", B);
         
@@ -115,7 +118,7 @@
         self.outputFrequency.text = @"Error with input";
         self.outputOmega.text = @"Error with input";
     }
-}
+ }
 
 
 @end
